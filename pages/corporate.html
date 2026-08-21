@@ -1,0 +1,493 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة سفر الشركات والوفود الرسمية - أوتاد للسفر الفاخر</title>
+    <meta name="description" content="حلول استراتيجية متكاملة لبعثات ومؤتمرات الشركات القابضة؛ تشمل تقارير المصاريف الذكية، أسعار تفضيلية، واتفاقيات SLA صارمة.">
+    <meta name="keywords" content="سفر الشركات, بعثات رسمية, تنظيم مؤتمرات, MICE, لوجستيات الشركات">
+    <meta property="og:title" content="إدارة سفر الشركات والوفود الرسمية - أوتاد للسفر الفاخر">
+    <meta property="og:description" content="حلول استراتيجية متكاملة لبعثات ومؤتمرات الشركات القابضة؛ تشمل تقارير المصاريف الذكية، أسعار تفضيلية، واتفاقيات SLA صارمة.">
+    <meta property="og:image" content="https://awtad-luxury.com">
+
+    <!-- خط Cairo من Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/corporate.css">
+    <!-- مكتبة الأيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+    <!-- الهيدر الموحد -->
+    <header class="main-header">
+        <div class="container">
+            <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+            
+<!-- 2. الشعار والهوية -->
+<div class="logo">
+    <a href="../index.html" class="brand-link">
+        <img src="../assets/logo.webp" alt="أوتاد للسفر الفاخر وحلول الأعمال">
+
+        <div class="brand-text">
+            <span class="brand-title">أوتاد للسفر الفاخر وحلول الأعمال</span>
+            <small class="brand-slogan">
+                المقام اللوجستي الأول لبعثات النخبة، والمعيار المعتمد لرحلات الطيران الخاص
+            </small>
+        </div>
+    </a>
+</div>            
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="title-menu">الخدمات الأساسية <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./flights.html">الطيران والنقل</a></li>
+                            <li><a href="./accommodation.html">الإقامة والمعيشة</a></li>
+                            <li><a href="./papers.html">الأوراق والوثائق</a></li>
+                            <li><a href="./tours.html">البرامج السياحية</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="active title-menu">الخدمات المتقدمة <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./corporate.html"  class="hear">سفر الشركات</a></li>
+                            <li><a href="./private-charter.html">الطيران الخاص</a></li>
+                            <li><a href="./special-tours.html">البرامج المتخصصة</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./about.html">من نحن</a></li>
+                    <li><a href="./contact.html">اتصل بنا</a></li>
+                    <li><a href="./live-itineraries.html">الرحلات</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta"><a href="./contact.html" class="btn-gold">احجز استشارتك</a></div>
+        </div>
+    </header>
+
+    <!-- واجهة الصفحة الداخلية (Sub-Hero) -->
+    <section class="sub-hero-corporate">
+        <div class="sub-hero-content">
+            <h1>إدارة سفر الشركات والوفود</h1>
+            <p>حلول لوجستية ذكية ومتكاملة لتنظيم رحلات موظفيكم وإدارة المؤتمرات والمعارض بأعلى كفاءة وأقل تكلفة</p>
+        </div>
+    </section>
+
+    <!-- قسم حاسبة نفقات السفر والتوفير للشركات (Interactive Calculator) -->
+    <section class="corporate-calculator-section">
+        <div class="container-corporate">
+            
+            <div class="section-header">
+                <span class="section-subtitle">إحصائيات مالية ذكية</span>
+                <h2 class="section-title">احسب <span>حجم توفير ميزانيتكم</span> معنا</h2>
+                <p class="section-desc">حرك مؤشر النفقات أدناه لتشاهد القيمة المالية التقديرية التي ستوفرها شركتكم سنوياً عند اعتماد باقات أعمالنا الفاخرة المخصصة.</p>
+            </div>
+
+            <!-- هيكل الحاسبة التفاعلية البصري -->
+            <div class="calculator-box">
+                <div class="calc-input-side">
+                    <h3>حجم ميزانية نفقات سفركم السنوية:</h3>
+                    
+                    <div class="range-wrapper">
+                        <input type="range" id="expenseRange" min="10000" max="200000" step="5000" value="50000" class="custom-range-slider">
+                        <div class="range-labels">
+                            <span>$10,000</span>
+                            <span>$200,000+</span>
+                        </div>
+                    </div>
+                    
+                    <div class="current-expense-display">
+                        الميزانية الحالية المختارة: <span id="currentExpenseValue">$50,000</span> سنوياً
+                    </div>
+                </div>
+
+                <div class="calc-result-side">
+                    <div class="result-card-inner">
+                        <i class="fa-solid fa-piggy-bank calc-result-icon"></i>
+                        <h4>القيمة التقديرية للتوفير السنوي:</h4>
+                        <div class="saved-money-amount" id="savedMoneyAmount">$10,000</div>
+                        <p class="calc-note">* بناءً على ميزات الخصومات المجمعة للشركات وتقارير النفقات الدورية بنسبة تترواح حول 20%.</p>
+                        <a href="contact.html" class="btn-gold" style="display: block; text-align: center; margin-top: 15px;">اطلب اتفاقية الشراكة</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="corporate-spotlight">
+        <div class="container-corporate spotlight-grid">
+            <div class="spotlight-media">
+                <img src="../assets/business-men-img.webp" alt="رحلات الشركات ورجال الأعمال">
+            </div>
+            <div class="spotlight-copy">
+                <span class="section-subtitle">لأصحاب القرار</span>
+                <h2 class="section-title">إدارة سفر <span>ذكية</span> وفخمة في آنٍ واحد</h2>
+                <p class="section-desc">نحوّل رحلات مؤسستك إلى نظام منظم، سريع، وذكي، يضمن راحة الموظفين وتخفيض النفقات مع الحفاظ على مستوى الخدمة الفاخرة المطلوب.</p>
+                <ul class="spotlight-list">
+                    <li><i class="fa-solid fa-circle-check"></i> تنسيق كامل للوفود والمؤتمرات والبعثات</li>
+                    <li><i class="fa-solid fa-circle-check"></i> إدارة نفقات السفر من خلال تقارير مالية دقيقة</li>
+                    <li><i class="fa-solid fa-circle-check"></i> أولوية في الحجز، الاستقبال، والنقل الفاخر</li>
+                </ul>
+                <a href="contact.html" class="btn-gold-small">احجز استشارتك الآن</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم تفاصيل خدمات الشركات (Grid) -->
+    <section class="corporate-details">
+        <div class="container-corporate">
+            
+            <div class="section-header">
+                <span class="section-subtitle">شريككم اللوجستي المعتمد</span>
+                <h2 class="section-title">منظومة <span>حلول الأعمال</span> الحصرية</h2>
+                <p class="section-desc">نصمم برامج مخصصة للشركات والمؤسسات تضمن راحة وفودكم مع توفير أدوات ذكية لإدارة النفقات وتحسين ميزانية السفر.</p>
+            </div>
+
+            <div class="corporate-features-grid">
+                
+                <!-- الميزة 1: حسابات مخصصة -->
+                <div class="corp-feature-card">
+                    <div class="corp-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <h3>إدارة الحسابات الشاملة</h3>
+                    <p>نوفر لشركتكم مديراً مخصصاً لإدارة الحساب، يتولى تنظيم رحلات الموظفين والبعثات التجارية على مدار الساعة بأسعار تفضيلية مخفضة وحجوزات مرنة.</p>
+                </div>
+
+                <!-- الميزة 2: لوجستيات المعارض -->
+                <div class="corp-feature-card">
+                    <div class="corp-icon"><i class="fa-solid fa-handshake"></i></div>
+                    <h3>تسهيل المعارض والمؤتمرات</h3>
+                    <p>بدءاً من حجز قاعات الاجتماعات المجهزة، وتنسيق لوجستيات الوفود الكبيرة، إلى تأمين النقل الجماعي الفاخر واستقبال كبار الشخصيات بالمطارات.</p>
+                </div>
+
+                <!-- الميزة 3: تقارير المصاريف -->
+                <div class="corp-feature-card">
+                    <div class="corp-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                    <h3>تقارير المصاريف الذكية</h3>
+                    <p>نعمل على تزويد الإدارة المالية بشركتكم بتحليلات وبيانات دورية لنفقات السفر، مما يسهل رصد الميزانيات وتطبيق خطط ذكية لتقليل التكاليف.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- قسم خطوات بناء الشراكة مع الشركات (Steps Section) -->
+    <section class="corporate-steps">
+        <div class="container-corporate">
+            
+            <div class="section-header">
+                <span class="section-subtitle">آلية العمل معنا</span>
+                <h2 class="section-title">كيف تبدأ <span>شراكتنا اللوجستية</span>؟</h2>
+                <p class="section-desc">خطوات بسيطة ومؤتمتة تمكن شركتكم من بدء إدارة رحلات موظفيها بكفاءة مطلقة وأسعار تفضيلية.</p>
+            </div>
+
+            <!-- شبكة الخطوات المتسلسلة -->
+            <div class="steps-grid">
+                
+                <!-- الخطوة 1 -->
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3>تقديم طلب الشراكة</h3>
+                    <p>قم بتعبئة نموذج الاتصال المخصص للشركات أو تواصل مع فريقنا لتقديم معلومات مؤسستك وحجم السفر المتوقع سنويًا.</p>
+                </div>
+
+                <!-- الخطوة 2 -->
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3>تخصيص الحساب والأسعار</h3>
+                    <p>يقوم مستشارنا المالي بتقديم عرض أسعار حصري تفضيلي يتناسب مع ميزانية شركتك وتخصيص لوحة تحكم لإدارتكم الموقرة.</p>
+                </div>
+
+                <!-- الخطوة 3 -->
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3>انطلاق السفر والتقارير</h3>
+                    <p>يبدأ موظفوكم بالسفر والحجز الفوري عبر مدير الحساب المخصص، مع إرسال تقارير نفقات دورية مؤتمتة لإدارتكم المالية.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         إضافة 1: مستويات العضوية والتعاقد السنوي الحصرية (Tier Memberships)
+         ========================================================================== -->
+    <section class="corporate-tiers-section">
+        <div class="container-corporate">
+            <div class="section-header">
+                <span class="section-subtitle">برامج تعاقد مرنة ومدروسة</span>
+                <h2 class="section-title">فئات <span>التعاقد السنوي</span> الحصري</h2>
+                <p class="section-desc">اختر فئة العضوية التي تتناسب مع حجم وحركة سفر وفود مؤسستكم لتستمتع بميزات تفضيلية وأولويات لوجستية لا مثيل لها.</p>
+            </div>
+
+            <div class="tiers-grid">
+                <!-- الفئة الفضية -->
+                <div class="tier-card">
+                    <div class="tier-header">
+                        <h3>الفئة الفضية (Corporate Silver)</h3>
+                        <p>للشركات الناشئة والمتوسطة</p>
+                    </div>
+                    <div class="tier-discount">خصم ثابت حصري: <span>10%</span></div>
+                    <ul class="tier-features">
+                        <li><i class="fa-solid fa-circle-check"></i> مدير حساب مشترك للدعم والمساندة.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> تقارير مصاريف ربع سنوية شاملة.</li>
+                        <li class="muted-tier-feat"><i class="fa-solid fa-circle-xmark"></i> دخول صالات كبار الشخصيات مجاناً.</li>
+                    </ul>
+                </div>
+
+                <!-- الفئة الذهبية المتميزة (تميزت هندسياً بالذهبي والكحلي) -->
+                <div class="tier-card tier-featured">
+                    <span class="tier-hot-badge">الأكثر اختياراً ✨</span>
+                    <div class="tier-header">
+                        <h3>الفئة الذهبية (Corporate Gold)</h3>
+                        <p>للمؤسسات والشركات الكبرى</p>
+                    </div>
+                    <div class="tier-discount">خصم ثابت حصري: <span>18%</span></div>
+                    <ul class="tier-features">
+                        <li><i class="fa-solid fa-circle-check"></i> مدير حساب تنفيذي مخصص لشركتكم 24/7.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> تقارير مصاريف ذكية وتحليلات مالية شهرية.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> ترقية مجانية لدرجة الأعمال (مرتين سنوياً).</li>
+                        <li><i class="fa-solid fa-circle-check"></i> دخول مجاني لصالون كبار الشخصيات بالمطارات.</li>
+                    </ul>
+                </div>
+
+                <!-- فئة الـ Elite البلاتينية -->
+                <div class="tier-card">
+                    <div class="tier-header">
+                        <h3>فئة النخبة (Corporate Elite)</h3>
+                        <p>للمجموعات والشركات العالمية القابضة</p>
+                    </div>
+                    <div class="tier-discount">خصم ثابت حصري: <span>25%</span></div>
+                    <ul class="tier-features">
+                        <li><i class="fa-solid fa-circle-check"></i> فريق إدارة لوجستي كامل مخصص للمجموعة 24/7.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> تحليلات مالية فورية عبر لوحة تحكم حية وربط مالي.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> ترقيات مفتوحة وغير محدودة لدرجات السفر الأولى.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> أولوية قصوى لحجز الطيران الخاص والـ Charter الفوري.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         إضافة 2: جدول مصفوفة المميزات الرسمي والـ SLA الفخم
+         ========================================================================== -->
+    <section class="corporate-table-section">
+        <div class="container-corporate">
+            <div class="section-header">
+                <span class="section-subtitle">اتفاقية مستوى الخدمة الصارمة</span>
+                <h2 class="section-title">مصفوفة <span>المميزات والـ SLA</span> المعتمدة</h2>
+                <p class="section-desc">نحن نلتزم بأعلى معايير السرعة والدقة والامتثال اللوجستي لضمان سير أعمال وفودكم الرسمية دون أي عوائق.</p>
+            </div>
+
+            <div class="corp-table-responsive">
+                <table class="corp-compare-table">
+                    <thead>
+                        <tr>
+                            <th>المعايير والخدمات</th>
+                            <th>الفئة الفضية</th>
+                            <th>الفئة الذهبية</th>
+                            <th>فئة النخبة (Elite)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>سرعة الاستجابة وتأكيد الحجز (SLA)</strong></td>
+                            <td>خلال ساعتين كحد أقصى</td>
+                            <td>خلال 45 دقيقة فقط</td>
+                            <td class="highlight-gold-text">استجابة فورية (أقل من 15 دقيقة)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>مرونة تعديل وإلغاء الرحلات التلقائي</strong></td>
+                            <td>حسب شروط الخطوط الجوية</td>
+                            <td>تعديل مجاني (حتى 3 مرات شهرياً)</td>
+                            <td class="highlight-gold-text">مرونة إلغاء وتعديل مفتوحة ومجانية بالكامل</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الاستقبال والترحيب بالمطارات (Meet & Greet)</strong></td>
+                            <td>خصم 15% على الخدمة</td>
+                            <td>مشمول لجميع المدراء التنفيذيين</td>
+                            <td class="highlight-gold-text">مشمول لجميع موظفي ووفود الشركة مجاناً</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الربط الإلكتروني وبوابة الفوترة</strong></td>
+                            <td>تقارير عبر البريد الإلكتروني</td>
+                            <td>بوابة فوترة شهرية مخصصة للشركة</td>
+                            <td class="highlight-gold-text">ربط مالي مباشر مع النظام المالي لمجموعتكم</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         إضافة 3: منشئ الباقات اللوجستية التفاعلي الجديد (Interactive Package Builder)
+         ========================================================================== -->
+    <section class="corporate-builder-section">
+        <div class="container-corporate">
+            <div class="section-header">
+                <span class="section-subtitle">صمم منظومة سفرك برمجياً</span>
+                <h2 class="section-title">منشئ <span>الباقات اللوجستية</span> التفاعلي للشركات</h2>
+                <p class="section-desc">قم بتحديد الميزات اللوجستية التي تحتاجها وفود شركتك حالياً، وسيقوم نظامنا الآلي بتوليد نوع العقد الموصى به ونسبة الخصم فوراً.</p>
+            </div>
+
+            <div class="builder-container-box">
+                <div class="builder-inputs-side">
+                    <h3>🛠️ اختر الميزات والخدمات المطلوبة لوفدكم:</h3>
+                    
+                    <div class="builder-checkbox-group">
+                        <label class="corp-check-container">
+                            <input type="checkbox" class="corp-builder-check" data-score="1" checked disabled>
+                            <span class="corp-checkmark"></span>
+                            <p><strong>حجز وإصدار تذاكر الطيران:</strong> الخدمة اللوجستية الأساسية لكافة الموظفين والوفود.</p>
+                        </label>
+                        <label class="corp-check-container">
+                            <input type="checkbox" class="corp-builder-check" data-score="2">
+                            <span class="corp-checkmark"></span>
+                            <p><strong>استقبال كبار الشخصيات وصالات الـ Lounge:</strong> مسار سريع ودخول صالات رجال الأعمال بالمطارات.</p>
+                        </label>
+                        <label class="corp-check-container">
+                            <input type="checkbox" class="corp-builder-check" data-score="3">
+                            <span class="corp-checkmark"></span>
+                            <p><strong>تأجير سيارات فارهة (مرسيدس S-Class مع سائق):</strong> حلول النقل البري التنفيذي الفاخر والآمن للوفد.</p>
+                        </label>
+                        <label class="corp-check-container">
+                            <input type="checkbox" class="corp-builder-check" data-score="4">
+                            <span class="corp-checkmark"></span>
+                            <p><strong>تأجير وتنسيق الطائرات الخاصة (Charter):</strong> للوفود الكبيرة جداً أو التنقلات الطارئة شديدة السرعة والخصوصية.</p>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="builder-results-side">
+                    <div class="builder-result-inner">
+                        <div class="builder-icon-top"><i class="fa-solid fa-sliders"></i></div>
+                        <h4>نوع العقد الموصى به لمؤسستكم:</h4>
+                        <div class="generated-tier-name" id="generatedTierName">العقد الفضي الأساسي</div>
+                        
+                        <div class="generated-discount-box">
+                            نسبة الخصم السنوية المتوقعة: <strong id="generatedDiscountValue">10%</strong>
+                        </div>
+
+                        <p class="builder-feedback" id="builderFeedbackText">باقة ممتازة تغطي أساسيات السفر الجوي لموظفي الشركات الناشئة.</p>
+                        <a href="contact.html" class="btn-gold" style="display: block; text-align: center; margin-top: 20px;">طلب اعتماد هذه الباقة</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="corporate-final-cta">
+        <div class="container-corporate">
+            <div class="cta-panel">
+                <div class="cta-copy">
+                    <span class="section-subtitle">استراتيجية سفر احترافية</span>
+                    <h2 class="section-title">ابدأ شراكتك مع فريق <span>أوتاد للسفر الفاخر وحلول الأعمال</span></h2>
+                    <p class="section-desc">صمم رحلة شركتك وفق احتياجك، بدعم لوجستي متكامل، فريق متخصص، وخطة مالية مرنة تناسب نمو مؤسستك.</p>
+                </div>
+                <a href="contact.html" class="btn-gold">اطلب اتفاقية الشراكة</a>
+            </div>
+        </div>
+    </section>
+    <!-- بداية تذييل الموقع (Footer) -->
+    <footer class="main-footer">
+        <div class="container-footer">
+            
+            <!-- العمود الأول: عن المكتب واللوجو -->
+            <div class="footer-col footer-about">
+                <div class="footer-logo">
+                    <a href="../index.html" class="brand-link-footer">
+                        <img src="../assets/logo.webp" alt="أوتاد للسفر الفاخر وحلول الأعمال">
+                        
+                        <div class="brand-text">
+                            <span class="brand-title">أوتاد للسفر الفاخر وحلول الأعمال</span>
+                            <small class="brand-slogan">
+                                المقام اللوجستي الأول لبعثات النخبة، والمعيار المعتمد لرحلات الطيران الخاص
+                            </small>
+                        </div>
+                    </a>
+                </div>
+                <p class="footer-desc-text">مكتب سفر وسياحة رائد مخصص لتقديم حلول لوجستية فاخرة ومتكاملة لرجال الأعمال، الشركات، والأفراد بأعلى معايير الرفاهية والأمان.</p>
+                <div class="social-links">
+                    <a href="#" title="فيسبوك"><i class="fab fa-brands fa-facebook-f"></i></a>
+                    <a href="#" title="انستغرام"><i class="fab fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- العمود الثاني: روابط سريعة للخدمات الأساسية -->
+            <div class="footer-col">
+                <h3>خدماتنا الأساسية</h3>
+                <ul class="footer-links">
+                    <li><a href="./flights.html"><i class="fas fa-chevron-left"></i> حجز وتعديل الطيران</a></li>
+                    <li><a href="./accommodation.html"><i class="fas fa-chevron-left"></i> الفنادق والمنتجعات</a></li>
+                    <li><a href="./papers.html"><i class="fas fa-chevron-left"></i> استخراج التأشيرات</a></li>
+                    <li><a href="./tours.html"><i class="fas fa-chevron-left"></i> البرامج السياحية</a></li>
+                </ul>
+            </div>
+
+            <!-- العمود الثالث: خدمات الشركات والمتقدمة -->
+            <div class="footer-col">
+                <h3>خدمات متقدمة</h3>
+                <ul class="footer-links">
+                    <li><a href="./corporate.html"><i class="fas fa-chevron-left"></i> إدارة سفر الشركات</a></li>
+                    <li><a href="./private-charter.html"><i class="fas fa-chevron-left"></i> تأجير الطائرات الخاصة</a></li>
+                    <li><a href="./special-tours.html"><i class="fas fa-chevron-left"></i> السياحة العلاجية والتعليمية</a></li>
+                    <li><a href="./contact.html"><i class="fas fa-chevron-left"></i> خطط التقسيط والتمويل</a></li>
+                </ul>
+            </div>
+
+            <!-- العمود الرابع: معلومات الاتصال والدعم -->
+            <div class="footer-col footer-contact">
+                <h3>تواصل معنا</h3>
+                <ul class="contact-info-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>برج الرفاهية التجاري، الطابق 14، الرياض، المملكة العربية السعودية</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span dir="ltr">+966 5X XXX XXXX</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>info@yourdomain.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <span>دعم العملاء: 24 ساعة / 7 أيام</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- شريط الحقوق السفلي -->
+        <div class="footer-bottom">
+            <div class="container-bottom">
+                <p>&copy; 2026 <span>أوتاد للسفر الفاخر وحلول الأعمال</span>. جميع الحقوق محفوظة.</p>
+                <div class="bottom-links">
+                    <a href="./privacy-policy.html">سياسة الخصوصية</a>
+                    <a href="./cookies-policy.html">سياسة الكوكيز</a>
+                    <a href="./terms-conditions.html">الشروط والأحكام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/corporate.js"></script>
+</body>
+</html>

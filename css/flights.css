@@ -1,0 +1,623 @@
+/* ==========================================================================
+   تنسيقات واجهة صفحة الطيران والنقل الفرعية
+   ========================================================================== */
+.sub-hero-flights {
+    /* دمج لون كحلي شفاف مع الصورة لضمان وضوح النص ومقروئيته */
+    background: linear-gradient(rgba(21, 34, 56, 0.45), rgba(21, 34, 56, 0.45)), url('../assets/flights-hero.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px 0;
+    text-align: center;
+    color: var(--bg-ivory);
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.5); /* تأثير سينمائي ناعم على أطراف الواجهة */
+}
+
+.sub-hero-content h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--accent-gold); /* تلوين العنوان بالذهبي الفخم ليعكس الهوية */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6); /* ظل خلف النص للحماية والوضوح */
+}
+
+.sub-hero-content p {
+    font-size: 18px;
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--bg-ivory);
+    line-height: 1.6;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* تنسيق قسم التبويبات العام */
+.flights-tabs-section {
+    padding: 100px 0;
+    background-color: #ffffff; /* خلفية بيضاء لتعطي تباين مريح ومحترف */
+}
+
+.container-flights {
+    width: 85%;
+    max-width: 1000px; /* العرض ملموم ومنظم لإبراز لوحة التحكم */
+    margin: 0 auto;
+}
+
+/* شريط أزرار التبويب العلوي */
+.tabs-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background-color: var(--bg-ivory); /* لون عاجي دافئ كقاعدة للأزرار */
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.tab-nav-btn {
+    background-color: transparent;
+    border: none;
+    color: var(--primary-dark);
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-family: var(--main-font);
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.tab-nav-btn i {
+    font-size: 16px;
+    color: var(--text-muted);
+}
+
+/* التفاعل وتلوين التبويب النشط بالكحلي والذهبي */
+.tab-nav-btn:hover, .tab-nav-btn.active-tab {
+    background-color: var(--primary-dark);
+    color: var(--bg-ivory);
+}
+
+.tab-nav-btn.active-tab i {
+    color: var(--accent-gold);
+}
+
+/* لوحات المحتوى السفلي */
+.tab-content-panel {
+    display: none; /* مخفية افتراضياً حتى يظهرها الـ JS */
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.4s ease-in-out;
+}
+
+.tab-content-panel.active-panel {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tab-panel-inner {
+    background-color: var(--bg-ivory);
+    padding: 45px;
+    border-radius: 12px;
+    border: 1px solid rgba(21, 34, 56, 0.03);
+    box-shadow: 0 10px 35px rgba(21, 34, 56, 0.02);
+}
+
+/* تصميم محرك الحجز الأبيض الداخلي */
+.flight-search-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(21, 34, 56, 0.02);
+    border: 1px solid rgba(21, 34, 56, 0.04);
+}
+
+.search-form-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+}
+.search-form-title i { color: var(--accent-gold); margin-left: 5px; }
+
+.flight-type-selector {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.radio-label input[type="radio"] {
+    accent-color: var(--accent-gold); /* تلوين نقطة الراديو بالذهبي للهوية */
+    width: 17px; height: 17px;
+}
+
+/* شبكة حقول الإدخال */
+.search-fields-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.form-group-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group-field label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+.input-with-icon { position: relative; width: 100%; }
+
+.input-with-icon input, .custom-date-input, .custom-select-field {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 4px;
+    border: 1px solid rgba(21, 34, 56, 0.15);
+    background-color: var(--bg-ivory);
+    font-family: var(--main-font);
+    font-size: 13.5px;
+    color: var(--primary-dark);
+    outline: none;
+    transition: all 0.3s;
+}
+.input-with-icon input { padding-right: 38px; }
+.input-with-icon i { position: absolute; top: 50%; right: 14px; transform: translateY(-50%); color: var(--text-muted); font-size: 13px; }
+
+.input-with-icon input:focus, .custom-date-input:focus, .custom-select-field:focus {
+    border-color: var(--accent-gold);
+    background-color: #ffffff;
+    box-shadow: 0 0 8px rgba(185, 137, 61, 0.15);
+}
+
+/* إعدادات حقل العودة المخفي برمجياً */
+#returnDateFieldGroup {
+    display: none;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.3s ease-in-out;
+}
+#returnDateFieldGroup.show-return {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.flight-search-submit-btn {
+    width: 100%; text-align: center; border: none; padding: 14px; font-size: 15px; cursor: pointer;
+}
+
+/* نصوص وعناصر القائمة السفلى */
+.panel-text h3 { font-size: 22px; font-weight: 700; color: var(--primary-dark); margin-bottom: 15px; }
+.panel-text p { font-size: 15px; line-height: 1.8; color: var(--text-muted); margin-bottom: 20px; }
+.panel-features-list { list-style: none; }
+.panel-features-list li { font-size: 14px; color: var(--primary-dark); margin-bottom: 10px; display: flex; align-items: center; gap: 10px; font-weight: 600; }
+.panel-features-list li i { color: var(--accent-gold); }
+
+/* تجاوب لوحة التبويب للموبايل */
+@media (max-width: 768px) {
+    .tabs-nav { flex-direction: column; gap: 5px; }
+    .tab-nav-btn { width: 100%; justify-content: flex-start; padding: 10px 15px; }
+    .tab-panel-inner { padding: 25px 20px; }
+}
+
+/* العناوين الفرعية الداخلية للتبويبات */
+.sub-panel-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-top: 35px;
+    margin-bottom: 20px;
+    border-right: 3px solid var(--accent-gold); /* خط عمودي ذهبي يعطي فخامة للعنوان */
+    padding-right: 10px;
+}
+
+/* ==========================================================================
+   تنسيقات جدول مقارنة تذاكر الطيران الاحترافي المتجاوب
+   ========================================================================== */
+.flights-table-responsive {
+    width: 100%;
+    overflow-x: auto; /* يسمح بالتمرير الأفقي على الموبايل لحماية بنية الموقع من الانكسار */
+    box-shadow: 0 5px 15px rgba(21, 34, 56, 0.03);
+    border-radius: 8px;
+    background-color: #ffffff;
+    border: 1px solid rgba(21, 34, 56, 0.05);
+    margin-top: 10px;
+}
+
+.flights-compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: right;
+    font-size: 14px;
+}
+
+.flights-compare-table th {
+    background-color: var(--primary-dark); /* رأس جدول كحلي فخم */
+    color: var(--bg-ivory);
+    padding: 15px 18px;
+    font-weight: 700;
+}
+
+.flights-compare-table td {
+    padding: 15px 18px;
+    border-bottom: 1px solid rgba(21, 34, 56, 0.06);
+    color: var(--primary-dark);
+}
+
+/* تظليل خفيف جداً لسطر الجدول عند مرور الماوس */
+.flights-compare-table tbody tr:hover {
+    background-color: rgba(185, 137, 61, 0.02);
+}
+
+.price-highlight {
+    font-weight: 700;
+    color: var(--accent-gold); /* إضاءة خانة السعر باللون الذهبي */
+    font-size: 16px;
+}
+
+/* شارات التوصية الملونة المستوحاة من هويتك البصرية */
+.flight-status-badge {
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    display: inline-block;
+}
+/* دمج لون أخضر الواحة التخصصي لخيار التوصية الأساسي */
+.flight-status-badge.best-choice { background-color: rgba(46, 107, 103, 0.15); color: var(--secondary-teal); }
+.flight-status-badge.economy-choice { background-color: rgba(185, 137, 61, 0.15); color: var(--accent-gold); }
+.flight-status-badge.regular-choice { background-color: #f1f1f1; color: var(--text-muted); }
+
+/* ==========================================================================
+   تنسيقات شبكة كروت أسطول السيارات والتأجير المتقدمة
+   ========================================================================== */
+.car-fleet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 10px;
+}
+
+.car-card {
+    background-color: #ffffff; /* كروت بيضاء ناصعة تباين الخلفية العاجية للبانيل */
+    padding: 35px 25px;
+    border-radius: 8px;
+    border: 1px solid rgba(21, 34, 56, 0.04);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* تأثير الارتفاع الناعم وبروز الحدود بالذهبي عند تمرير الماوس */
+.car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(21, 34, 56, 0.05);
+    border-color: var(--accent-gold);
+}
+
+/* شارات تصنيف السيارات العلوية */
+.car-tag {
+    position: absolute;
+    top: 15px; left: 15px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--bg-ivory);
+}
+.vip-tag { background-color: var(--primary-dark); color: var(--accent-gold); border: 1px solid var(--accent-gold); }
+.family-tag { background-color: var(--secondary-teal); } /* أخضر واحة للتصنيف العائلي */
+.eco-tag { background-color: var(--text-muted); }
+
+.car-icon-box {
+    font-size: 38px;
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+    transition: color 0.3s;
+}
+.car-card:hover .car-icon-box {
+    color: var(--accent-gold); /* الأيقونة تتحول للذهبي عند التمرير */
+}
+
+.car-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+}
+
+.car-card p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+/* مساحة السعر اليومي المنسقة */
+.car-price {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 600;
+    padding: 10px;
+    background-color: var(--bg-ivory);
+    border-radius: 4px;
+}
+.car-price span {
+    font-size: 20px;
+    color: var(--alert-brick); /* اللون القرميدي المحروق لجذب الانتباه للأسعار التنافسية */
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   1. تنسيقات صندوق تتبع الرحلات الحية الفخم
+   ========================================================================== */
+.flight-tracker-section {
+    padding: 80px 0;
+    background-color: var(--bg-ivory); /* تناوب الخلفية للون العاجي الدافئ الهادئ */
+}
+
+.tracker-box {
+    max-width: 700px;
+    margin: 40px auto 0 auto;
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(21, 34, 56, 0.04);
+    border: 1px solid rgba(21, 34, 56, 0.03);
+}
+
+.tracker-input-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.tracker-input-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tracker-input-group label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+.tracker-input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 4px;
+    border: 1px solid rgba(21, 34, 56, 0.15);
+    background-color: var(--bg-ivory);
+    font-family: var(--main-font);
+    font-size: 14px;
+    color: var(--primary-dark);
+    outline: none;
+    transition: all 0.3s;
+}
+.tracker-input-group input:focus { border-color: var(--accent-gold); background-color: #ffffff; }
+
+#trackFlightBtn {
+    border: none; padding: 13px 25px; font-size: 14px; cursor: pointer; font-weight: 700;
+}
+
+/* لوحة النتائج المستجيبة للحركة التفاعلية */
+.tracker-result-panel {
+    display: none; /* مخفية تلقائياً ويظهرها الـ JS */
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+    background-color: var(--primary-dark); /* خلفية كحلية ليليّة لتعطي وقار وفخامة لوحة المطارات */
+    color: var(--bg-ivory);
+    padding: 25px;
+    border-radius: 8px;
+    border-top: 3px solid var(--accent-gold);
+}
+
+.tracker-result-panel.show-panel {
+    display: block; opacity: 1; transform: translateY(0);
+}
+
+.tracker-header-data {
+    display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;
+}
+.flight-code-badge { background-color: rgba(255,255,255,0.1); padding: 5px 12px; border-radius: 4px; font-weight: 700; color: var(--accent-gold); }
+
+/* شارات الحالة لمتتبع الطيران بالوان الهوية البصرية بدقة */
+.flight-status-live { padding: 4px 10px; border-radius: 4px; font-size: 12px; font-weight: 700; }
+.flight-status-live.status-on-time { background-color: rgba(46, 107, 103, 0.2); color: #4fa19b; border: 1px solid var(--secondary-teal); }
+.flight-status-live.status-delayed { background-color: rgba(156, 74, 45, 0.2); color: #e06d48; border: 1px solid var(--alert-brick); }
+
+/* خط وعقد المسار الجوي البصري */
+.tracker-route-display {
+    display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.route-node h4 { font-size: 18px; font-weight: 700; color: var(--bg-ivory); margin-bottom: 5px; }
+.route-node p { font-size: 12px; color: #dfdbd3; }
+.route-line-wrapper { flex: 1; display: flex; flex-direction: column; align-items: center; position: relative; margin: 0 20px; }
+.route-line-wrapper i { font-size: 16px; color: var(--accent-gold); transform: rotate(-90deg); margin-bottom: 5px; }
+.dot-line { width: 100%; height: 2px; background: repeating-linear-gradient(90deg, var(--accent-gold), var(--accent-gold) 4px, transparent 4px, transparent 8px); }
+
+.tracker-footer-meta { display: flex; justify-content: space-between; font-size: 13px; color: #dfdbd3; margin-top: 15px; }
+.tracker-footer-meta strong { color: var(--bg-ivory); }
+.text-left { text-align: left; }
+
+/* ==========================================================================
+   2. تنسيقات أكورديون الأسئلة الشائعة حول الطيران (FAQs)
+   ========================================================================== */
+.flights-faq-section { padding: 100px 0; background-color: #ffffff; }
+.faq-accordion-wrapper { max-width: 800px; margin: 40px auto 0 auto; display: flex; flex-direction: column; gap: 15px; }
+
+.faq-item {
+    border: 1px solid rgba(21, 34, 56, 0.08); border-radius: 6px; overflow: hidden; background-color: var(--bg-ivory); transition: all 0.3s;
+}
+
+.faq-toggle-btn {
+    width: 100%; padding: 20px 25px; background-color: transparent; border: none; font-family: var(--main-font); font-size: 15px; font-weight: 700; color: var(--primary-dark); text-align: right; display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: background 0.3s;
+}
+.faq-toggle-btn i { font-size: 14px; color: var(--text-muted); transition: transform 0.3s ease; }
+
+.faq-item:hover { border-color: var(--accent-gold); }
+
+/* عندما ينفتح الأكورديون بالـ JS */
+.faq-item.faq-open .faq-toggle-btn { background-color: var(--primary-dark); color: var(--bg-ivory); }
+.faq-item.faq-open .faq-toggle-btn i { color: var(--accent-gold); transform: rotate(45deg); } /* علامة الزائد تتحول لإكس بشكل رائع */
+
+.faq-answer-panel {
+    max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1); background-color: #ffffff;
+}
+.faq-answer-panel p { padding: 20px 25px; font-size: 14px; line-height: 1.7; color: var(--text-muted); }
+
+/* تجاوب العناصر المضافة للموبايل */
+@media (max-width: 768px) {
+    .tracker-input-row { flex-direction: column; align-items: stretch; }
+    .tracker-route-display { flex-direction: column; gap: 20px; text-align: center; }
+    .text-left { text-align: center; }
+    .route-line-wrapper { transform: rotate(90deg); margin: 20px 0; }
+    .tracker-footer-meta { flex-direction: column; gap: 10px; }
+}
+
+/* ==========================================================================
+   1. تنسيقات كروت درجات السفر الفخمة
+   ========================================================================== */
+.cabin-classes-section {
+    padding: 100px 0;
+    background-color: var(--bg-ivory); /* خلفية عاجية دافئة ومريحة */
+}
+
+.cabin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.cabin-card {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(21, 34, 56, 0.04);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.cabin-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(21, 34, 56, 0.06);
+}
+
+/* الكرت المتميز (درجة الأعمال) الملون بالهوية الفاخرة للكحلي والذهبي */
+.cabin-card.cabin-featured {
+    background-color: var(--primary-dark);
+    color: var(--bg-ivory);
+    border: 2px solid var(--accent-gold);
+    transform: scale(1.03); /* تكبير طفيف لتمييزه فوراً */
+}
+.cabin-card.cabin-featured:hover {
+    transform: scale(1.03) translateY(-8px);
+}
+
+.cabin-hot-badge {
+    position: absolute;
+    top: -15px; right: 20px;
+    background-color: var(--accent-gold);
+    color: var(--primary-dark);
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.cabin-header {
+    text-align: center;
+    border-bottom: 1px solid rgba(21, 34, 56, 0.08);
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+.cabin-featured .cabin-header { border-bottom-color: rgba(255,255,255,0.08); }
+
+.cabin-header h3 { font-size: 20px; font-weight: 700; margin-bottom: 5px; }
+.cabin-header p { font-size: 13px; color: var(--text-muted); font-weight: 600; }
+.cabin-featured .cabin-header p { color: var(--accent-gold); }
+
+.cabin-features { list-style: none; }
+.cabin-features li { font-size: 14px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; font-weight: 600; }
+.cabin-features li i { color: var(--accent-gold); font-size: 16px; }
+
+/* ميزة غير مشمولة تظهر بلون باهت وعلامة إكس باللون القرميدي المحروق */
+.cabin-features li.muted-feat { color: var(--text-muted); }
+.cabin-features li.muted-feat i { color: var(--alert-brick); }
+
+/* ==========================================================================
+   2. تنسيقات شريط شركاء النجاح والـ Animation المتحرك تلقائياً
+   ========================================================================== */
+.airlines-partners-section {
+    padding: 40px 0;
+    background-color: var(--primary-dark);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    overflow: hidden;
+}
+
+.airlines-slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* شريط التتبع والتحريك لانهائي الانسيابي بالـ CSS فقط */
+.airlines-track {
+    display: flex;
+    width: max-content;
+    gap: 60px;
+    animation: scrollLogos 25s linear infinite; /* حركة مستمرة مريحة جداً للعين */
+}
+
+.airline-logo-item {
+    font-size: 16px;
+    font-weight: 700;
+    color: rgba(250, 246, 236, 0.5); /* عاجي شفاف يعطي فخامة الماركات */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s;
+    cursor: default;
+}
+.airline-logo-item i { color: var(--accent-gold); font-size: 14px; }
+.airline-logo-item:hover { color: var(--bg-ivory); }
+
+/* دالة تحريك الشركاء من اليمين لليسار بنسق مستمر */
+@keyframes scrollLogos {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(33.33%); }
+}
+
+@media (max-width: 992px) {
+    .cabin-card.cabin-featured { transform: scale(1); }
+    .cabin-card.cabin-featured:hover { transform: translateY(-8px); }
+}

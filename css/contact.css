@@ -1,0 +1,433 @@
+/* ==========================================================================
+   تنسيقات واجهة صفحة "اتصل بنا" الختامية الفخمة المستقرة
+   ========================================================================== */
+.sub-hero-contact {
+    /* دمج تظليل كحلي ناعم بنسبة 45% لبروز ألوان الصورة الأصلية ونقاء مقروئية الكلمات */
+    background: linear-gradient(rgba(21, 34, 56, 0.45), rgba(21, 34, 56, 0.45)), url('../assets/contact-hero.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px 0;
+    text-align: center;
+    color: var(--bg-ivory);
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.5); /* حواف سينمائية غامقة وساحرة */
+}
+
+.sub-hero-content h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--accent-gold); /* لون ذهبي الغروب المعتمد لهويتك البصرية */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6); /* حماية مقروئية الخط للعين */
+}
+
+.sub-hero-content p {
+    font-size: 18px;
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--bg-ivory);
+    line-height: 1.6;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* تنسيقات قسم كروت التواصل العام */
+.contact-cards-section {
+    padding: 100px 0;
+    background-color: var(--bg-ivory); /* خلفية عاجية ملكية دافئة لمزيد من التناسق والبرستيج */
+    color: var(--primary-dark);
+}
+
+.container-contact {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* شبكة كروت التواصل الموزعة هندسياً */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+/* بطاقة كرت التواصل الفردي وحركاتها الانسيابية الفخمة */
+.contact-info-card {
+    background-color: #ffffff; /* كروت بيضاء ناصعة تباين الأرضية العاجية للقسم */
+    padding: 45px 30px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgba(21, 34, 56, 0.03);
+    box-shadow: 0 10px 30px rgba(21, 34, 56, 0.03);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* تأثير الارتفاع وتحول الكرت بالكامل للون الكحلي الملكي اللامع عند تمرير الماوس */
+.contact-info-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(21, 34, 56, 0.06);
+    background-color: var(--primary-dark);
+    color: var(--bg-ivory);
+    border-color: var(--primary-dark);
+}
+
+.contact-card-icon {
+    font-size: 38px;
+    color: var(--accent-gold); /* الأيقونات بلون ذهبي الغروب الجاذب للعين */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+.contact-info-card:hover .contact-card-icon {
+    transform: scale(1.1); /* زووم ناعم للأيقونة عند التحويم */
+}
+
+.contact-info-card h3 {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+    transition: color 0.3s;
+}
+.contact-info-card:hover h3 { color: var(--bg-ivory); }
+
+.contact-info-card p {
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    transition: color 0.3s;
+}
+.contact-info-card:hover p { color: #dfdbd3; }
+
+/* تنسيق خانات الأرقام والإيميلات داخل الكروت */
+.contact-card-meta {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    background-color: var(--bg-ivory);
+    padding: 8px 15px;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 8px;
+    transition: all 0.3s;
+}
+.contact-card-meta:last-child { margin-bottom: 0; }
+.contact-info-card:hover .contact-card-meta {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--accent-gold); /* التوهج بالذهبي الفخم داخل الكرت المظلم */
+}
+
+/* تمييز الكرت التنفيذي الأوسط بالكامل بالهوية الفاخرة للكحلي والذهبي الساطع */
+.contact-info-card.featured-contact-card {
+    background-color: var(--primary-dark);
+    color: var(--bg-ivory);
+    border: 2px solid var(--accent-gold);
+}
+.featured-contact-card h3 { color: var(--bg-ivory); }
+.featured-contact-card p { color: #dfdbd3; }
+.featured-contact-card .contact-card-meta { background-color: rgba(255, 255, 255, 0.05); color: var(--accent-gold); }
+
+.contact-hot-badge {
+    position: absolute; top: -14px; right: 25px;
+    background-color: var(--accent-gold); color: var(--primary-dark);
+    padding: 4px 12px; border-radius: 4px; font-size: 11px; font-weight: 700;
+}
+
+/* تجاوب القسم مع الشاشات المختلفة */
+@media (max-width: 768px) {
+    .contact-info-grid { grid-template-columns: 1fr; gap: 25px; }
+    .contact-info-card { padding: 35px 20px; }
+}
+
+/* ==========================================================================
+   1. تنسيقات كروت مستشاري الدعم المناوبين والنقاط الخضراء النابضة حياً
+   ========================================================================== */
+.concierge-agents-section {
+    padding: 100px 0;
+    background-color: var(--bg-ivory); /* خلفية عاجية ملكية دافئة للتناوب البصري الفخم */
+    color: var(--primary-dark);
+}
+
+.agents-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.agent-card {
+    background-color: #ffffff; padding: 45px 30px; border-radius: 8px; border: 1px solid rgba(21, 34, 56, 0.04); position: relative; display: flex; flex-direction: column; justify-content: space-between; text-align: center; transition: all 0.3s ease;
+}
+.agent-card:hover { transform: translateY(-7px); box-shadow: 0 12px 25px rgba(21, 34, 56, 0.05); border-color: var(--accent-gold); }
+
+/* تمييز الكرت التنفيذي الأوسط باللون الكحلي والذهب الفخم للبرستيج والامتثال */
+.agent-card.featured-agent-card {
+    background-color: var(--primary-dark); color: var(--bg-ivory); border: 2px solid var(--accent-gold); transform: scale(1.02);
+}
+.agent-card.featured-agent-card:hover { transform: scale(1.02) translateY(-7px); }
+
+/* تغليف وتنسيق النقطة الخضراء النابضة حياً بـ CSS للواقعية المطلقة */
+.agent-status-wrapper {
+    position: absolute; top: 20px; right: 25px; display: flex; align-items: center; gap: 8px;
+}
+
+.agent-status-pulse {
+    width: 10px; height: 10px; background-color: #2ecc71; border-radius: 50%; position: relative;
+}
+/* حركة النبض الدائرية المستمرة */
+.agent-status-pulse::after {
+    content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; border: 2px solid #2ecc71; animation: pulseGreen 1.8s infinite ease-out;
+}
+.gold-pulse { background-color: var(--accent-gold); }
+.gold-pulse::after { border-color: var(--accent-gold) !important; }
+
+@keyframes pulseGreen {
+    0% { transform: scale(0.8); opacity: 1; }
+    100% { transform: scale(2.2); opacity: 0; }
+}
+
+.agent-status-text { font-size: 11px; font-weight: 700; color: #2ecc71; }
+.gold-status-text { color: var(--accent-gold) !important; }
+
+.agent-icon-box { font-size: 36px; color: var(--primary-dark); margin-top: 15px; margin-bottom: 15px; }
+.agent-card:hover .agent-icon-box { color: var(--accent-gold); }
+.featured-agent-card .agent-icon-box { color: var(--accent-gold); }
+
+.agent-card h3 { font-size: 19px; font-weight: 700; color: var(--primary-dark); margin-bottom: 5px; }
+.featured-agent-card h3 { color: var(--bg-ivory); }
+
+.agent-role { font-size: 12.5px; color: var(--accent-gold); font-weight: 700; margin-bottom: 15px; }
+.agent-desc-text { font-size: 13.5px; line-height: 1.6; color: var(--text-muted); text-align: justify; text-align-last: center; }
+.featured-agent-card .agent-desc-text { color: #dfdbd3; }
+
+/* ==========================================================================
+   2. تنسيقات منصة وصندوق جدولة الاستشارات الافتراضية الفاخرة (VIP Scheduler)
+   ========================================================================== */
+.vip-scheduler-section {
+    padding: 100px 0; background-color: #ffffff; /* تباين ناصع مريح للعين لقاعدة البوكس */
+}
+
+.scheduler-container-box {
+    display: flex; background-color: var(--bg-ivory); border-radius: 12px; overflow: hidden; border: 1px solid rgba(21, 34, 56, 0.04); margin-top: 50px; box-shadow: 0 15px 40px rgba(21, 34, 56, 0.04); color: var(--primary-dark);
+}
+
+.sched-inputs-side { flex: 1.3; padding: 50px 40px; display: flex; flex-direction: column; justify-content: center; }
+.sched-inputs-side h3 { font-size: 18px; font-weight: 700; margin-bottom: 25px; }
+.sched-field label { display: block; font-size: 13.5px; font-weight: 700; margin-bottom: 10px; }
+.sched-field label i { color: var(--accent-gold); margin-left: 3px; }
+
+/* جانب عرض بطاقة التأكيد الكحلي الفخم بالكامل لثبات الهوية المتقدمة */
+.sched-results-side {
+    flex: 1; background-color: var(--primary-dark); color: var(--bg-ivory); padding: 50px 40px; display: flex; align-items: center; justify-content: center; border-right: 1px solid rgba(21, 34, 56, 0.05);
+}
+.sched-result-inner { text-align: center; width: 100%; }
+.sched-icon-top { font-size: 45px; color: var(--accent-gold); margin-bottom: 15px; }
+.sched-result-inner h4 { font-size: 15px; color: #dfdbd3; font-weight: 600; margin-bottom: 15px; }
+.sched-confirmed-title { font-size: 26px; font-weight: 700; color: var(--bg-ivory); margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 12px; }
+
+/* بنود المخرجات زجاجياً بالـ CSS */
+.sched-output-item-fahm {
+    font-size: 13.5px; color: #dfdbd3; background-color: rgba(255, 255, 255, 0.05); padding: 12px 15px; border-radius: 4px; display: block; margin-bottom: 12px; border-right: 3px solid var(--accent-gold); text-align: right;
+}
+.sched-output-item-fahm span { color: var(--accent-gold); font-weight: 700; margin-right: 5px; }
+.sched-feedback-note { font-size: 11px; line-height: 1.5; color: #dfdbd3; margin-top: 15px; text-align: justify; text-align-last: center; }
+
+/* تجاوب أداة الجدولة */
+@media (max-width: 992px) {
+    .scheduler-container-box { flex-direction: column; }
+    .sched-inputs-side, .sched-results-side { padding: 35px 20px; }
+    .agent-card.featured-agent-card { transform: scale(1); }
+    .agent-card.featured-agent-card:hover { transform: translateY(-7px); }
+}
+
+/* ==========================================================================
+   1. تنسيقات كروت فروع وأوقات العمل العالمية
+   ========================================================================== */
+.global-zones-section {
+    padding: 100px 0;
+    background-color: var(--bg-ivory); /* خلفية عاجية ملكية متناغمة للتناوب البصري */
+}
+
+.zones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.zone-card {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(21, 34, 56, 0.04);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+.zone-card:hover { transform: translateY(-7px); box-shadow: 0 12px 25px rgba(21, 34, 56, 0.05); border-color: var(--accent-gold); }
+
+/* تمييز فرع لندن باللون الكحلي والذهب الفخم للبرستيج والامتثال */
+.zone-card.featured-zone-fahm {
+    background-color: var(--primary-dark);
+    color: var(--bg-ivory);
+    border: 2px solid var(--accent-gold);
+}
+
+.zone-badge-fahm {
+    position: absolute; top: -15px; left: 20px;
+    padding: 4px 12px; border-radius: 4px;
+    font-size: 11px; font-weight: 700; color: var(--bg-ivory);
+    background-color: var(--secondary-teal);
+}
+.gold-zone-badge { background-color: var(--accent-gold); color: var(--primary-dark); }
+.brick-zone-badge { background-color: var(--alert-brick); }
+
+.zone-header-fahm { border-bottom: 1px solid rgba(21, 34, 56, 0.08); padding-bottom: 15px; margin-bottom: 20px; }
+.featured-zone-fahm .zone-header-fahm { border-bottom-color: rgba(255,255,255,0.08); }
+.zone-header-fahm h3 { font-size: 18px; font-weight: 700; color: var(--primary-dark); }
+.featured-zone-fahm .zone-header-fahm h3 { color: var(--bg-ivory); }
+
+.zone-details-list { list-style: none; }
+.zone-details-list li { font-size: 13.5px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; color: var(--primary-dark); }
+.featured-zone-fahm .zone-details-list li { color: #dfdbd3; }
+.zone-details-list li i { color: var(--accent-gold); font-size: 15px; }
+
+/* ==========================================================================
+   2. تنسيقات صندوق تتبع حالة المعاملات المطور بالـ CSS
+   ========================================================================== */
+.request-tracker-section {
+    padding: 100px 0; background-color: #ffffff; /* تباين ناصع مريح للعين لقاعدة بوكس التتبع */
+}
+
+.req-tracker-box {
+    max-width: 700px; margin: 40px auto 0 auto; background-color: var(--bg-ivory); padding: 35px; border-radius: 12px; box-shadow: 0 10px 30px rgba(21, 34, 56, 0.04); border: 1px solid rgba(21, 34, 56, 0.03);
+}
+
+.req-tracker-input-row { display: flex; align-items: flex-end; gap: 15px; margin-bottom: 25px; }
+.req-tracker-input-group { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+.req-tracker-input-group label { font-size: 13px; font-weight: 700; color: var(--primary-dark); }
+.req-tracker-input-group input {
+    width: 100%; padding: 12px 15px; border-radius: 4px; border: 1px solid rgba(21, 34, 56, 0.15); background-color: #ffffff; font-family: var(--main-font); font-size: 14px; color: var(--primary-dark); outline: none; transition: all 0.3s;
+}
+.req-tracker-input-group input:focus { border-color: var(--accent-gold); }
+
+#trackRequestBtn { border: none; padding: 13px 25px; font-size: 14px; cursor: pointer; font-weight: 700; }
+
+/* لوحة النتائج المنبثقة حية بالكامل بالكحلي الفخم لبرستيج لوحات المطارات والسفارات */
+.req-tracker-result-panel {
+    display: none; /* مخفية تلقائياً ويفتحها الـ JS */
+    opacity: 0; transform: translateY(-10px); transition: all 0.4s ease;
+    background-color: var(--primary-dark); color: var(--bg-ivory); padding: 25px; border-radius: 8px; border-top: 3px solid var(--accent-gold);
+}
+.req-tracker-result-panel.show-panel { display: block; opacity: 1; transform: translateY(0); }
+
+.req-tracker-header-data { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 15px; }
+.req-code-badge { background-color: rgba(255,255,255,0.1); padding: 5px 12px; border-radius: 4px; font-weight: 700; color: var(--accent-gold); }
+
+.req-status-live { padding: 4px 10px; border-radius: 4px; font-size: 12px; font-weight: 700; background-color: rgba(46, 107, 103, 0.2); color: #4fa19b; border: 1px solid var(--secondary-teal); }
+
+.req-details-body { display: flex; flex-direction: column; gap: 12px; text-align: right; }
+.req-detail-line { font-size: 14px; color: #dfdbd3; }
+.req-detail-line strong { color: var(--bg-ivory); margin-left: 5px; }
+
+.req-tracker-note { font-size: 11px; color: #dfdbd3; line-height: 1.5; margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 10px; text-align: justify; text-align-last: center; }
+
+@media (max-width: 768px) {
+    .req-tracker-input-row { flex-direction: column; align-items: stretch; }
+    #trackRequestBtn { width: 100%; }
+}
+
+/* ==========================================================================
+   1. تنسيقات لوحة خطوط الطوارئ الساخنة القرميدية الفخمة
+   ========================================================================== */
+.contact-emergencies-section {
+    padding: 100px 0;
+    background-color: var(--bg-ivory); /* خلفية عاجية ملكية متناغمة للتناوب البصري */
+}
+
+.emergencies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.emergency-card {
+    background-color: #ffffff;
+    padding: 45px 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(21, 34, 56, 0.04);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+/* تأثير التحويم والبروز باللون القرميدي المحروق الجاذب للانتباه والطوارئ */
+.emergency-card:hover { 
+    transform: translateY(-7px); 
+    box-shadow: 0 12px 25px rgba(156, 74, 45, 0.08); 
+    border-color: var(--alert-brick); 
+}
+
+.emergency-icon-box {
+    font-size: 38px;
+    color: var(--alert-brick); /* لون قرميدي محروق ملفت للانتباه */
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+.emergency-card:hover .emergency-icon-box { transform: scale(1.1) rotate(10deg); }
+
+.emergency-card h3 { font-size: 18px; font-weight: 700; color: var(--primary-dark); margin-bottom: 12px; }
+.emergency-card p { font-size: 13.5px; line-height: 1.6; color: var(--text-muted); margin-bottom: 20px; text-align: justify; text-align-last: center; }
+
+.emergency-phone-lux {
+    font-size: 16px; font-weight: 700; color: var(--bg-ivory); background-color: var(--alert-brick); /* خلفية قرميدية للرقم للطوارئ */
+    padding: 10px 20px; border-radius: 4px; width: 100%; text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* ==========================================================================
+   2. تنسيقات صندوق مؤشر زمن الاستجابة المتوقع الحركي (Response Estimator)
+   ========================================================================== */
+.response-estimator-section {
+    padding: 100px 0; background-color: #ffffff; /* تباين ناصع يعزز راحة العين */
+}
+
+.estimator-container-box {
+    display: flex; background-color: var(--bg-ivory); border-radius: 12px; overflow: hidden; border: 1px solid rgba(21, 34, 56, 0.04); margin-top: 50px; box-shadow: 0 15px 40px rgba(21, 34, 56, 0.04); color: var(--primary-dark);
+}
+
+.est-inputs-side { flex: 1.4; padding: 50px 40px; display: flex; flex-direction: column; justify-content: center; }
+.est-inputs-side h3 { font-size: 18px; font-weight: 700; margin-bottom: 15px; }
+.est-field label { display: block; font-size: 13.5px; font-weight: 700; margin-bottom: 12px; }
+.est-field label i { color: var(--accent-gold); margin-left: 3px; }
+.est-instruction-note { font-size: 12.5px; line-height: 1.6; color: var(--text-muted); margin-top: 20px; text-align: justify; }
+
+/* جانب عرض بطاقة المؤشر الكحلي الفخم بالكامل لثبات الهوية المتقدمة */
+.est-results-side {
+    flex: 1; background-color: var(--primary-dark); color: var(--bg-ivory); padding: 50px 40px; display: flex; align-items: center; justify-content: center; border-right: 1px solid rgba(21, 34, 56, 0.05);
+}
+.est-result-inner { text-align: center; width: 100%; }
+.est-icon-top { font-size: 45px; color: var(--accent-gold); margin-bottom: 15px; }
+.est-result-inner h4 { font-size: 15px; color: #dfdbd3; font-weight: 600; margin-bottom: 10px; }
+.est-confirmed-title { font-size: 28px; font-weight: 700; color: var(--secondary-teal); margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 12px; } /* تلوين الرد بأخضر واحة المريح */
+
+/* بنود المخرجات زجاجياً بالـ CSS */
+.est-output-item-fahm {
+    font-size: 13.5px; color: #dfdbd3; background-color: rgba(255, 255, 255, 0.05); padding: 12px 15px; border-radius: 4px; display: block; margin-bottom: 12px; border-right: 3px solid var(--accent-gold); text-align: right;
+}
+.est-output-item-fahm span { color: var(--accent-gold); font-weight: 700; margin-right: 5px; }
+
+/* تجاوب عناصر الصندوق */
+@media (max-width: 992px) {
+    .estimator-container-box { flex-direction: column; }
+    .est-inputs-side, .est-results-side { padding: 35px 20px; }
+}

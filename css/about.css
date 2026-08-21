@@ -1,0 +1,405 @@
+/* ==========================================================================
+   تنسيقات واجهة صفحة "من نحن" التعريفية المستقرة الفخمة
+   ========================================================================== */
+.sub-hero-about {
+    /* دمج تظليل كحلي ناعم بنسبة 45% لضمان نقاء تفاصيل الصورة الأصلية وبروز الكلمات فوقها ببرستيج */
+    background: linear-gradient(rgba(21, 34, 56, 0.45), rgba(21, 34, 56, 0.45)), url('../assets/about-hero.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px 0;
+    text-align: center;
+    color: var(--bg-ivory);
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.5); /* تأثير سينمائي غامق للأطراف */
+}
+
+.sub-hero-content h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--accent-gold); /* لون ذهبي الغروب المعتمد لهويتك البصرية البراقة */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6); /* حماية وضوح ومقروئية النص */
+}
+
+.sub-hero-content p {
+    font-size: 18px;
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--bg-ivory);
+    line-height: 1.6;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* تنسيقات قسم القصة والرؤية العام */
+.about-story-section {
+    padding: 100px 0;
+    background-color: var(--bg-ivory); /* خلفية عاجية ملكية دافئة لمزيد من البرستيج والأناقة */
+    color: var(--primary-dark);
+}
+
+.container-about {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* الصف الأول المنقسم عرضياً بصورة فخمة */
+.about-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.about-text-side {
+    flex: 1.2;
+}
+
+.about-subtitle-tag {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.about-text-side h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+}
+.about-text-side h2 span { color: var(--accent-gold); }
+
+.about-text-side p {
+    font-size: 14.5px;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.about-img-side {
+    flex: 1;
+}
+.about-img-side img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(21, 34, 56, 0.06);
+    border: 1px solid rgba(21, 34, 56, 0.02);
+}
+
+/* 2. شبكة كروت الرؤية والرسالة */
+.vision-mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+}
+
+.vision-card {
+    background-color: #ffffff; /* قاعدة بيضاء ناصعة تباين الخلفية العاجية */
+    padding: 45px 35px;
+    border-radius: 12px;
+    border: 1px solid rgba(21, 34, 56, 0.04);
+    box-shadow: 0 10px 30px rgba(21, 34, 56, 0.03);
+    position: relative;
+    transition: all 0.3s ease;
+}
+.vision-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(21, 34, 56, 0.06); }
+
+/* تمييز كرت الرسالة التنفيذي باللون الكحلي والذهبي الساطع لقطاع الأعمال الفاخر */
+.vision-card.featured-vision-card {
+    background-color: var(--primary-dark);
+    color: var(--bg-ivory);
+    border: 2px solid var(--accent-gold);
+}
+
+.vision-hot-badge {
+    position: absolute; top: -15px; right: 25px;
+    background-color: var(--accent-gold); color: var(--primary-dark);
+    padding: 4px 12px; border-radius: 4px; font-size: 11px; font-weight: 700;
+}
+
+.vision-icon-box {
+    font-size: 36px;
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+}
+.featured-vision-card .vision-icon-box { color: var(--accent-gold); }
+
+.vision-card h3 { font-size: 22px; font-weight: 700; margin-bottom: 15px; color: var(--primary-dark); }
+.featured-vision-card h3 { color: var(--bg-ivory); }
+
+.vision-card p { font-size: 14px; line-height: 1.7; color: var(--text-muted); text-align: justify; }
+.featured-vision-card p { color: #dfdbd3; }
+
+/* تجاوب القسم مع الأجهزة المختلفة */
+@media (max-width: 992px) {
+    .about-row { flex-direction: column; gap: 35px; }
+    .about-img-side img { height: 400px; }
+    .about-text-side h2 { font-size: 26px; }
+    .vision-card { padding: 35px 20px; }
+}
+
+/* ==========================================================================
+   تنسيقات شبكة ركائز وقيم المكتب الستة الفاخرة (Core Values Grid)
+   ========================================================================== */
+.core-values-section {
+    padding: 100px 0;
+    background-color: #ffffff; /* تباين ناصع يعطي توازناً بصرياً مريحاً للعين */
+}
+
+/* شبكة متجاوبة وموزعة هندسياً بدقة ثلاثية سداسية */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+/* بطاقة القيمة الفردية وحركاتها التفاعلية المتميزة */
+.value-card {
+    background-color: var(--bg-ivory); /* كروت بلون عاجي راقٍ فوق القاعدة البيضاء للقسم */
+    padding: 45px 30px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgba(21, 34, 56, 0.03);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* تأثير الارتفاع وانقلاب الكرت للون الكحلي الفخم عند تمرير الماوس لإبهار العميل */
+.value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(21, 34, 56, 0.06);
+    background-color: var(--primary-dark);
+    color: var(--bg-ivory);
+    border-color: var(--primary-dark);
+}
+
+.value-icon {
+    font-size: 38px;
+    color: var(--accent-gold); /* الأيقونات بلون ذهبي الغروب الجاذب للعين */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+.value-card:hover .value-icon {
+    transform: scale(1.1); /* زووم خفيف للأيقونة عند التحويم */
+}
+
+.value-card h3 {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--primary-dark);
+    transition: color 0.3s;
+}
+.value-card:hover h3 {
+    color: var(--bg-ivory); /* تحول العنوان للأبيض الناصع عند التلوين الداكن */
+}
+
+.value-card p {
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: var(--text-muted);
+    transition: color 0.3s;
+}
+/* تفتيح لون نص الوصف في حالة التحويم بالكحلي ليصبح مقروءاً بامتياز */
+.value-card:hover p {
+    color: #dfdbd3;
+}
+
+/* تجاوب الشبكة السداسية مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .values-grid { grid-template-columns: 1fr; gap: 25px; }
+    .value-card { padding: 35px 20px; }
+}
+
+/* ==========================================================================
+   1. تنسيقات خط الإنجازات والأرقام القياسية (Milestones)
+   ========================================================================== */
+.about-milestones-section {
+    padding: 100px 0;
+    background-color: var(--bg-ivory); /* خلفية عاجية دافئة للتناوب البصري الممتع */
+    color: var(--primary-dark);
+}
+
+.milestones-timeline-wrapper {
+    max-width: 800px;
+    margin: 50px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.mile-stone-node {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    border: 1px solid rgba(21, 34, 56, 0.04);
+    box-shadow: 0 5px 20px rgba(21, 34, 56, 0.02);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    transition: transform 0.3s ease;
+}
+.mile-stone-node:hover {
+    transform: translateX(-5px); /* حركة انزلاق أيمن خفيف عند التحويم لجمال الحركة */
+    border-right: 4px solid var(--accent-gold);
+}
+
+/* علب الأرقام الضخمة المشعة بألوان هويتك */
+.mile-number-box {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--secondary-teal); /* أخضر واحة تخصصي للرقم الأول */
+    background-color: rgba(46, 107, 103, 0.1);
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+}
+.mile-number-box.gold-mile { color: var(--accent-gold); background-color: rgba(185, 137, 61, 0.1); }
+.mile-number-box.brick-mile { color: var(--alert-brick); background-color: rgba(156, 74, 45, 0.1); }
+
+.mile-text-box h3 { font-size: 18px; font-weight: 700; color: var(--primary-dark); margin-bottom: 8px; }
+.mile-text-box p { font-size: 13.5px; line-height: 1.6; color: var(--text-muted); text-align: justify; }
+
+/* ==========================================================================
+   2. تنسيقات ألبوم المجلس التنفيذي والمستشارين (Board Grid)
+   ========================================================================== */
+.about-board-section {
+    padding: 100px 0;
+    background-color: #ffffff; /* تباين ناصع مريح للعين */
+    color: var(--primary-dark);
+}
+
+.board-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.board-card {
+    background-color: var(--bg-ivory);
+    padding: 45px 35px;
+    border-radius: 8px;
+    border: 1px solid rgba(21, 34, 56, 0.04);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+.board-card:hover { transform: translateY(-7px); box-shadow: 0 12px 25px rgba(21, 34, 56, 0.05); border-color: var(--accent-gold); }
+
+/* تمييز الكرت التنفيذي الأوسط باللون الكحلي والذهب الفخم للبرستيج */
+.board-card.featured-board-card {
+    background-color: var(--primary-dark);
+    color: var(--bg-ivory);
+    border: 2px solid var(--accent-gold);
+    transform: scale(1.02);
+}
+.board-card.featured-board-card:hover { transform: scale(1.02) translateY(-7px); }
+
+.board-badge-tag {
+    position: absolute; top: -14px; right: 25px;
+    padding: 4px 12px; border-radius: 4px;
+    font-size: 11px; font-weight: 700; color: var(--bg-ivory);
+    background-color: var(--primary-dark);
+}
+.gold-board-badge { background-color: var(--accent-gold); color: var(--primary-dark); }
+
+.board-content-inner h3 { font-size: 20px; font-weight: 700; color: var(--primary-dark); margin-top: 5px; margin-bottom: 5px; }
+.featured-board-card .board-content-inner h3 { color: var(--bg-ivory); }
+
+.board-position { font-size: 12.5px; color: var(--accent-gold); font-weight: 700; margin-bottom: 15px; }
+.board-bio-text { font-size: 13.5px; line-height: 1.6; color: var(--text-muted); text-align: justify; }
+.featured-board-card .board-bio-text { color: #dfdbd3; }
+
+/* تجاوب العناصر المضافة للموبايل */
+@media (max-width: 768px) {
+    .mile-stone-node { flex-direction: column; text-align: center; gap: 15px; padding: 25px; }
+    .mile-stone-node:hover { transform: translateY(-5px); border-right: none; border-bottom: 4px solid var(--accent-gold); }
+    .board-card.featured-board-card { transform: scale(1); }
+    .board-card.featured-board-card:hover { transform: translateY(-7px); }
+}
+
+/* ==========================================================================
+   تنسيقات جدارية المقرات والمكاتب الإقليمية اللوجستية
+   ========================================================================== */
+.about-hubs-section {
+    padding: 100px 0;
+    background-color: var(--bg-ivory); /* خلفية عاجية ملكية دافئة للتناوب البصري */
+}
+
+.hubs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.hub-card {
+    background-color: #ffffff; padding: 40px 30px; border-radius: 8px;
+    border: 1px solid rgba(21, 34, 56, 0.04); position: relative;
+    display: flex; flex-direction: column; transition: all 0.3s ease;
+}
+.hub-card:hover { transform: translateY(-7px); box-shadow: 0 12px 25px rgba(21, 34, 56, 0.04); border-color: var(--accent-gold); }
+
+/* تمييز مكتب لندن الكرت الأوسط باللون الكحلي والذهبي البراق الفخم */
+.hub-card.featured-hub-card {
+    background-color: var(--primary-dark); color: var(--bg-ivory); border: 2px solid var(--accent-gold); transform: scale(1.02);
+}
+.hub-card.featured-hub-card:hover { transform: scale(1.02) translateY(-7px); }
+
+.hub-badge-fahm {
+    position: absolute; top: -14px; right: 20px;
+    background-color: var(--primary-dark); color: var(--bg-ivory);
+    padding: 4px 12px; border-radius: 4px; font-size: 11px; font-weight: 700;
+}
+.gold-hub-badge { background-color: var(--accent-gold); color: var(--primary-dark); }
+
+.hub-card h3 { font-size: 19px; font-weight: 700; color: var(--primary-dark); margin-top: 10px; margin-bottom: 5px; }
+.featured-hub-card h3 { color: var(--bg-ivory); }
+
+.hub-address { font-size: 12px; color: var(--accent-gold); font-weight: 700; margin-bottom: 15px; }
+.hub-desc { font-size: 13.5px; line-height: 1.7; color: var(--text-muted); text-align: justify; }
+.featured-hub-card .hub-desc { color: #dfdbd3; }
+
+/* ==========================================================================
+   تنسيقات أكورديون الأسئلة الشائعة والموثوقية القانونية للمكتب
+   ========================================================================== */
+.about-faq-section { padding: 100px 0; background-color: #ffffff; }
+.about-faq-wrapper { max-width: 800px; margin: 40px auto 0 auto; display: flex; flex-direction: column; gap: 15px; }
+
+.about-faq-item {
+    border: 1px solid rgba(21, 34, 56, 0.08); border-radius: 6px; overflow: hidden; background-color: var(--bg-ivory); transition: all 0.3s;
+}
+.about-faq-toggle {
+    width: 100%; padding: 20px 25px; background-color: transparent; border: none; font-family: var(--main-font); font-size: 15px; font-weight: 700; color: var(--primary-dark); text-align: right; display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: background 0.3s;
+}
+.about-faq-toggle i { font-size: 14px; color: var(--text-muted); transition: transform 0.3s ease; }
+
+.about-faq-item:hover { border-color: var(--accent-gold); }
+
+/* حركات الأكورديون المفتوح والنشط بالـ JS */
+.about-faq-item.faq-open .about-faq-toggle { background-color: var(--primary-dark); color: var(--bg-ivory); }
+.about-faq-item.faq-open .about-faq-toggle i { color: var(--accent-gold); transform: rotate(45deg); }
+
+.about-faq-panel { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1); background-color: #ffffff; }
+.about-faq-panel p { padding: 20px 25px; font-size: 14px; line-height: 1.7; color: var(--text-muted); }
+
+@media (max-width: 768px) {
+    .hub-card.featured-hub-card { transform: scale(1); }
+    .hub-card.featured-hub-card:hover { transform: translateY(-7px); }
+}

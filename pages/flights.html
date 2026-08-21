@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حجز الطيران والنقل البري الفاخر - أوتاد للسفر الفاخر</title>
+    <meta name="description" content="قارن بين أفضل مسارات الطيران الجوي وترقيات درجات السفر الأولى، مع حجز أسطول السيارات الفاخرة والنقل البري التنفيذي المريح للوفود.">
+    <meta name="keywords" content="حجز طيران, ترقية درجات السفر, تأجير سيارات فاخرة, ليموزين VIP, نقل بري">
+    <meta property="og:title" content="حجز الطيران والنقل البري الفاخر - أوتاد للسفر الفاخر">
+    <meta property="og:description" content="تنسيق متكامل لحجوزات الطيران التجاري، ترقيات درجات السفر، وتأمين ليموزين النقل البري الفاخر لرجال الأعمال.">
+    <meta property="og:image" content="https://awtad-luxury.com">
+
+    <!-- ملف الـ CSS الأساسي المشترك (الخروج خطوة للخلف) -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- ملف الـ CSS المخصص لهذه الصفحة الفرعية -->
+    <link rel="stylesheet" href="../css/flights.css">
+
+    <!-- خط Cairo من Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- مكتبة الأيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+</head>
+<body>
+
+    <!-- الهيدر الموحد (مع تعديل مسارات الروابط للخروج خطوة للمجلد الرئيسي) -->
+    <header class="main-header">
+        <div class="container">
+            <!-- زر الموبايل الجانبي -->
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!-- 2. الشعار والهوية -->
+            <div class="logo">
+                <a href="../index.html" class="brand-link">
+                    <img src="../assets/logo.webp" alt="أوتاد للسفر الفاخر وحلول الأعمال">
+                
+                    <div class="brand-text">
+                        <span class="brand-title">أوتاد للسفر الفاخر وحلول الأعمال</span>
+                        <small class="brand-slogan">
+                            المقام اللوجستي الأول لبعثات النخبة، والمعيار المعتمد لرحلات الطيران الخاص
+                        </small>
+                    </div>
+                </a>
+            </div>
+
+            <!-- قائمة التنقل للخدمات -->
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    
+                    <li class="dropdown">
+                        <a href="#" class="active">الخدمات الأساسية <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./flights.html" class="hear">الطيران والنقل</a></li>
+                            <li><a href="./accommodation.html">الإقامة والمعيشة</a></li>
+                            <li><a href="./papers.html">الأوراق والوثائق</a></li>
+                            <li><a href="./tours.html">البرامج السياحية</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">الخدمات المتقدمة <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./corporate.html">سفر الشركات</a></li>
+                            <li><a href="./private-charter.html">الطيران الخاص</a></li>
+                            <li><a href="./special-tours.html">البرامج المتخصصة</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="./about.html">من نحن</a></li>
+                    <li><a href="./contact.html">اتصل بنا</a></li>
+                    <li><a href="./live-itineraries.html">الرحلات</a></li>
+                </ul>
+            </nav>
+
+            <!-- زر اتخاذ الإجراء السريع -->
+            <div class="header-cta">
+                <a href="./contact.html" class="btn-gold">احجز استشارتك</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- واجهة الصفحة الداخلية (Sub-Hero Section) -->
+    <section class="sub-hero-flights">
+        <div class="sub-hero-content">
+            <h1>خدمات الطيران والنقل البري</h1>
+            <p>تذاكر طيران مرنة، مقارنة ذكية للأسعار والمسارات، وحلول نقل بري فاخرة بانتظارك في بلد الوجهة</p>
+        </div>
+    </section>
+    <!-- سيتم تجميع بقية الأقسام هنا خطوة بخطوة -->
+    <!-- بداية قسم لوحة التبويب التفاعلية والمحتوى -->
+    <section class="flights-tabs-section">
+        <div class="container-flights">
+            
+            <!-- أزرار التبديل والتبويب (Navbar للـ Tabs) -->
+            <div class="tabs-nav">
+                <button class="tab-nav-btn active-tab" data-tab="tab-flight-booking">
+                    <i class="fa-solid fa-ticket-simple"></i> حجز وتعديل التذاكر
+                </button>
+                <button class="tab-nav-btn" data-tab="tab-price-compare">
+                    <i class="fa-solid fa-magnifying-glass-chart"></i> مقارنة الأسعار والمسارات
+                </button>
+                <button class="tab-nav-btn" data-tab="tab-land-transport">
+                    <i class="fa-solid fa-car-side"></i> النقل البري وتأجير السيارات
+                </button>
+            </div>
+
+            <!-- حاوية محتوى التبويبات الشامل -->
+            <div class="tabs-content-wrapper">
+                
+                <!-- التبويب 1: حجز وتعديل التذاكر (المحتوى النشط حالياً) -->
+                <div class="tab-content-panel active-panel" id="tab-flight-booking">
+                    <div class="tab-panel-inner">
+                        
+                        <!-- محرك البحث والحجز البصري المتقدم -->
+                        <div class="flight-search-container">
+                            <h4 class="search-form-title"><i class="fa-solid fa-paper-plane"></i> محرك الحجز الفوري وتعديل المواعيد</h4>
+                            
+                            <!-- خيارات نوع الرحلة (الراديو التفاعلي) -->
+                            <div class="flight-type-selector">
+                                <label class="radio-label">
+                                    <input type="radio" name="flightType" value="one-way" checked id="oneWayRadio">
+                                    <span>ذهاب فقط</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="flightType" value="round-trip" id="roundTripRadio">
+                                    <span>ذهاب وعودة</span>
+                                </label>
+                            </div>
+
+                            <!-- شبكة حقول إدخال البيانات (Grid) -->
+                            <div class="search-fields-grid">
+                                <div class="form-group-field">
+                                    <label>من (مطار المغادرة):</label>
+                                    <div class="input-with-icon">
+                                        <i class="fa-solid fa-plane-departure"></i>
+                                        <input type="text" placeholder="المدينة أو اسم المطار (مثل: الرياض)...">
+                                    </div>
+                                </div>
+                                <div class="form-group-field">
+                                    <label>إلى (بلد الوجهة):</label>
+                                    <div class="input-with-icon">
+                                        <i class="fa-solid fa-plane-arrival"></i>
+                                        <input type="text" placeholder="المدينة أو الوجهة (مثل: لندن)...">
+                                    </div>
+                                </div>
+                                <div class="form-group-field">
+                                    <label>تاريخ المغادرة:</label>
+                                    <input type="date" class="custom-date-input">
+                                </div>
+                                <!-- حقل العودة (يتحكم به الـ JS ليظهر عند اختيار ذهاب وعودة) -->
+                                <div class="form-group-field" id="returnDateFieldGroup">
+                                    <label>تاريخ العودة:</label>
+                                    <input type="date" class="custom-date-input">
+                                </div>
+                                <div class="form-group-field">
+                                    <label>درجة السفر المفضلة:</label>
+                                    <select class="custom-select-field">
+                                        <option value="economy">الدرجة السياحية (Economy)</option>
+                                        <option value="business">درجة الأعمال الفاخرة (Business)</option>
+                                        <option value="first">الدرجة الأولى الممتازة (First Class)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button class="btn-gold flight-search-submit-btn">ابحث عن أفضل العروض والمسارات</button>
+                        </div>
+
+                        <!-- النصوص التعريفية المكملة أسفل المحرك -->
+                        <div class="panel-text" style="margin-top: 40px; border-top: 1px solid rgba(21, 34, 56, 0.06); padding-top: 30px;">
+                            <h3>حجوزات طيران مرنة تلبي متطلباتك</h3>
+                            <p>نوفر لك خدمات إصدار تذاكر الطيران على كبرى الخطوط الجوية العالمية والمحلية، مع مرونة تامة تتيح لك إمكانية تعديل مواعيد السفر، إلغاء الحجوزات الطارئة، أو ترقية درجة السفر الفورية إلى درجة رجال الأعمال أو الدرجة الأولى الفاخرة بلمسة زر.</p>
+                            <ul class="panel-features-list">
+                                <li><i class="fa-solid fa-circle-check"></i> ترقية فورية لدرجات الأعمال والأولى</li>
+                                <li><i class="fa-solid fa-circle-check"></i> تعديل مواعيد وإلغاء حجوزات مرن بالكامل</li>
+                                <li><i class="fa-solid fa-circle-check"></i> دعم فوري متواصل لحل مشاكل الأمتعة والرحلات</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- التبويبات الأخرى (2 و 3) سنضيف هياكلها بالتفصيل في الخطوات القادمة لنمشي بتدرج مريح -->
+
+                <!-- التبويب 2: مقارنة الأسعار (يفتح بالـ JS لاحقاً عند الضغط على الزر الثاني) -->
+                <div class="tab-content-panel" id="tab-price-compare">
+                    <div class="tab-panel-inner">
+                        <div class="panel-text">
+                            <h3>مقارنة ذكية لأفضل الأسعار والمسارات عبر كبرى الخطوط الجوية</h3>
+                            <p>نعمل عبر أنظمة حجز عالمية ومؤتمتة تتيح لنا مسح ومقارنة الأسعار والعروض المتاحة عبر مئات الخطوط الجوية في ثوانٍ معدودة، لنضمن تزويدك بأفضل مسار طيران مباشر، وأقل تكلفة مالية ممكنة لرحلتك دون المساس بمستوى الجودة والراحة.</p>
+                        </div>
+                        
+                        <!-- جدول تفصيلي لمقارنة رحلة افتراضية نشطة لملء وتأثيث الصفحة بالبيانات -->
+                        <h4 class="sub-panel-title">مثال لمقارنة مسارات رحلة (الرياض - لندن) لموسم السفر الحالي:</h4>
+                        <div class="flights-table-responsive">
+                            <table class="flights-compare-table">
+                                <thead>
+                                    <tr>
+                                        <th>الخطوط الجوية</th>
+                                        <th>نوع المسار</th>
+                                        <th>الوزن المسموح</th>
+                                        <th>الميزات الإضافية</th>
+                                        <th>السعر التقديري</th>
+                                        <th>التوصية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>الخطوط السعودية</strong></td>
+                                        <td>مباشر (بدون توقف)</td>
+                                        <td>حقيبتان (23 كجم لكل منهما)</td>
+                                        <td>وجبة ساخنة + اختيار المقعد مجاناً</td>
+                                        <td class="price-highlight">$680</td>
+                                        <td><span class="flight-status-badge best-choice">الخيار الأفضل ✈️</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>الخطوط التركية</strong></td>
+                                        <td>توقف واحد (إسطنبول - 1.5 س)</td>
+                                        <td>حقيبة واحدة (30 كجم)</td>
+                                        <td>وجبة مشمولة + تعديل مجاني للرحلة</td>
+                                        <td class="price-highlight">$540</td>
+                                        <td><span class="flight-status-badge economy-choice">الأقل تكلفة</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>طيران الإمارات</strong></td>
+                                        <td>توقف واحد (دبي - 2 س)</td>
+                                        <td>حقيبة واحدة (25 كجم)</td>
+                                        <td>نظام ترفيه متقدم + إنترنت واي فاي خفيف</td>
+                                        <td class="price-highlight">$720</td>
+                                        <td><span class="flight-status-badge regular-choice">خدمة ممتازة</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- التبويب 3: النقل البري وتأجير السيارات (يفتح بالـ JS لاحقاً عند الضغط على الزر الثالث) -->
+                <div class="tab-content-panel" id="tab-land-transport">
+                    <div class="tab-panel-inner">
+                        <div class="panel-text">
+                            <h3>نقل بري فاخر وحلول تنقل متكاملة بانتظارك فور وصولك</h3>
+                            <p>لا تشغل بالك بكيفية الانتقال من المطار؛ نحن نرتب لك مسبقاً خدمات حجز سيارات أجرة خاصة مجهزة، حافلات سياحية حديثة للمجموعات الكبيرة، أو تأجير سيارات فارهة لتكون بانتظارك فور هبوط طائرتك في بلد الوجهة مباشرة.</p>
+                        </div>
+
+                        <!-- شبكة كروت أسطول السيارات المتاحة للتأجير والطلب الفوري -->
+                        <h4 class="sub-panel-title">خيارات أسطول السيارات المتاحة في بلد الوجهة:</h4>
+                        <div class="car-fleet-grid">
+                            
+                            <!-- سيارة 1: فئة VIP لرجال الأعمال -->
+                            <div class="car-card">
+                                <span class="car-tag vip-tag">VIP فخمة</span>
+                                <div class="car-icon-box"><i class="fa-solid fa-car-rear"></i></div>
+                                <h3>مرسيدس S-Class (مع سائق)</h3>
+                                <p>خيار مثالي لرجال الأعمال والوفود الرسمية، سيارة فارهة مجهزة بالكامل ومزودة بسائق محترف يتحدث لغتك وملم بكافة الطرق اللوجستية.</p>
+                                <div class="car-price">تبدأ من <span>$180</span> / يوم</div>
+                            </div>
+
+                            <!-- سيارة 2: فئة عائلية وجماعية -->
+                            <div class="car-card">
+                                <span class="car-tag family-tag">عائلية واسعة</span>
+                                <div class="car-icon-box"><i class="fa-solid fa-van-shuttle"></i></div>
+                                <h3>فان مرسيدس فيتو (Mercedes Vito)</h3>
+                                <p>مساحة ممتازة تتسع حتى 7 ركاب مع أمتعتهم الكبيرة، مكيفة ومريحة جداً للجولات السياحية العائلية الطويلة أو المجموعات المشتركة.</p>
+                                <div class="car-price">تبدأ من <span>$110</span> / يوم</div>
+                            </div>
+
+                            <!-- سيارة 3: فئة اقتصادية عمليّة -->
+                            <div class="car-card">
+                                <span class="car-tag eco-tag">اقتصادية وعملية</span>
+                                <div class="car-icon-box"><i class="fa-solid fa-car"></i></div>
+                                <h3>تويوتا كامري / هيونداي إلنترا</h3>
+                                <p>سيارة حديثة، مريحة وعملية للمشاوير السريعة في المدن، تتميز بكفاءة عالية في استهلاك الوقود وسعر تأجير يومي منافس جداً ومناسب.</p>
+                                <div class="car-price">تبدأ من <span>$45</span> / يوم</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         إضافة 1: صندوق متابعة حالة الرحلات الفورية (Live Flight Status Tracker)
+         ========================================================================== -->
+    <section class="flight-tracker-section">
+        <div class="container-flights">
+            <div class="section-header">
+                <span class="section-subtitle">تحديثات لحظية ومباشرة</span>
+                <h2 class="section-title">تتبع <span>حالة رحلتك</span> فوراً</h2>
+                <p class="section-desc">أدخل رقم رحلتك أدناه للاستعلام الفوري عن مواعيد الإقلاع والوصول، وبوابة المغادرة، وحالة الطيران الحالية.</p>
+            </div>
+
+            <!-- لوحة تتبع الرحلات التفاعلية -->
+            <div class="tracker-box">
+                <div class="tracker-input-row">
+                    <div class="tracker-input-group">
+                        <label>أدخل رقم الرحلة الاسترشادي:</label>
+                        <input type="text" id="flightNumberInput" placeholder="مثلاً: SV123، EK201، TK182...">
+                    </div>
+                    <button class="btn-gold" id="trackFlightBtn"><i class="fa-solid fa-radar"></i> استعلام عن الرحلة</button>
+                </div>
+
+                <!-- لوحة النتائج الذكية (مخفية وتظهر بالـ JS بحركة أنيقة) -->
+                <div class="tracker-result-panel" id="trackerResultPanel">
+                    <div class="tracker-header-data">
+                        <span class="flight-code-badge" id="resFlightCode">SV 123</span>
+                        <span class="flight-status-live" id="resFlightStatus">في الموعد</span>
+                    </div>
+                    <div class="tracker-route-display">
+                        <div class="route-node">
+                            <h4 id="resDepartureCity">الرياض (RUH)</h4>
+                            <p>المغادرة: <span id="resDepartureTime">14:30</span></p>
+                        </div>
+                        <div class="route-line-wrapper">
+                            <i class="fa-solid fa-plane"></i>
+                            <div class="dot-line"></div>
+                        </div>
+                        <div class="route-node text-left">
+                            <h4 id="resArrivalCity">لندن (LHR)</h4>
+                            <p>الوصول: <span id="resArrivalTime">19:45</span></p>
+                        </div>
+                    </div>
+                    <div class="tracker-footer-meta">
+                        <span><i class="fa-solid fa-door-open"></i> بوابة المغادرة: <strong id="resFlightGate">G12</strong></span>
+                        <span><i class="fa-solid fa-building"></i> الصالة: <strong id="resFlightTerminal">الصالة 3</strong></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         إضافة 2: أكورديون الأسئلة الشائعة حول الطيران (FAQs Accordion)
+         ========================================================================== -->
+    <section class="flights-faq-section">
+        <div class="container-flights">
+            <div class="section-header">
+                <span class="section-subtitle">إجابات سريعة لراحتك</span>
+                <h2 class="section-title">الأسئلة الشائعة حول <span>السياسات والأمتعة</span></h2>
+                <p class="section-desc">جمعنا لك أكثر الأسئلة تكراراً حول تعديل التذاكر وإلغاء الرحلات وشحن الوزن الزائد المنسقة بعناية.</p>
+            </div>
+
+            <!-- حاوية الأكورديون التفاعلي -->
+            <div class="faq-accordion-wrapper">
+                
+                <!-- السؤال 1 -->
+                <div class="faq-item">
+                    <button class="faq-toggle-btn">
+                        <span>كيف يمكنني تعديل موعد الرحلة أو إلغاء الحجز بالكامل؟</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer-panel">
+                        <p>يمكنكم تعديل المواعيد أو إلغاء الحجز بسهولة عبر التواصل مع مدير حسابكم المخصص أو فريق الدعم الفني لدينا قبل 24 ساعة على الأقل من موعد الإقلاع. وتعتمد رسوم التعديل أو الاسترداد المالي بالكامل على سياسة وشروط الخطوط الجوية الناقلة والمشمولة بالتذكرة الصادرة.</p>
+                    </div>
+                </div>
+
+                <!-- السؤال 2 -->
+                <div class="faq-item">
+                    <button class="faq-toggle-btn">
+                        <span>ما هي الإجراءات المتبعة في حال ضياع الأمتعة أو إلغاء الرحلة من الخطوط؟</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer-panel">
+                        <p>في حال حدوث أي إلغاء مفاجئ من الخطوط الجوية أو ضياع للأمتعة، يتولى فريق دعم العملاء لدينا (المتاح 24/7) التدخل الفوري م نيابة عنكم؛ حيث نقوم بتأمين مسارات بديلة فورية، أو ترتيب التعويضات المالية الطبية واللوجستية الكاملة المشمولة بوثيقة تأمين السفر الدولي الخاصة بكم.</p>
+                    </div>
+                </div>
+
+                <!-- السؤال 3 -->
+                <div class="faq-item">
+                    <button class="faq-toggle-btn">
+                        <span>هل يمكنني شحن أمتعة زائدة أو معدات رياضية كبيرة مسبقاً؟</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer-panel">
+                        <p>نعم، بالتأكيد. من خلال باقات الخدمات المتقدمة والفاخرة لدينا، نقوم بالتنسيق المسبق مع شركات الشحن المعتمدة والخطوط الجوية لحجز وزن إضافي مسبق الدفع بخصومات تصل إلى 30%، وتأمين نقل المعدات الكبيرة (الرياضية أو الموسيقية) بأمان تام لتصل إلى وجهتكم مباشرة.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         إضافة 1: كروت مقارنة ترقيات درجات السفر (Cabin Class Showroom)
+         ========================================================================== -->
+    <section class="cabin-classes-section">
+        <div class="container-flights">
+            <div class="section-header">
+                <span class="section-subtitle">اختر مستوى رفاهيتك</span>
+                <h2 class="section-title">مقارنة <span>درجات السفر</span> ومميزات الترقية</h2>
+                <p class="section-desc">اطلع على الفروقات والميزات الاستثنائية التي تحصل عليها عند ترقية حجزك معنا إلى درجات السفر المتقدمة.</p>
+            </div>
+
+            <div class="cabin-grid">
+                <!-- الدرجة السياحية المتميزة -->
+                <div class="cabin-card">
+                    <div class="cabin-header">
+                        <h3>الدرجة السياحية المتميزة</h3>
+                        <p>Premium Economy</p>
+                    </div>
+                    <ul class="cabin-features">
+                        <li><i class="fa-solid fa-circle-check"></i> مساحة إضافية مريحة للأرجل</li>
+                        <li><i class="fa-solid fa-circle-check"></i> وجبات ساخنة مختارة مجاناً</li>
+                        <li><i class="fa-solid fa-circle-check"></i> شاشة ترفيهية مخصصة 12 بوصة</li>
+                        <li class="muted-feat"><i class="fa-solid fa-circle-xmark"></i> دخول صالات المطار الـ Lounge</li>
+                    </ul>
+                </div>
+
+                <!-- درجة الأعمال الفاخرة -->
+                <div class="cabin-card cabin-featured">
+                    <span class="cabin-hot-badge">الأكثر طلباً ✨</span>
+                    <div class="cabin-header">
+                        <h3>درجة الأعمال الفاخرة</h3>
+                        <p>Business Class</p>
+                    </div>
+                    <ul class="cabin-features">
+                        <li><i class="fa-solid fa-circle-check"></i> مقاعد تتحول لأسرة مسطحة بالكامل</li>
+                        <li><i class="fa-solid fa-circle-check"></i> قائمة طعام فاخرة وحصرية 5 نجوم</li>
+                        <li><i class="fa-solid fa-circle-check"></i> دخول مجاني لجميع صالات رجال الأعمال</li>
+                        <li><i class="fa-solid fa-circle-check"></i> أولوية قصوى لإنهاء إجراءات السفر والشحن</li>
+                    </ul>
+                </div>
+
+                <!-- الدرجة الأولى الفاخرة -->
+                <div class="cabin-card">
+                    <div class="cabin-header">
+                        <h3>الدرجة الأولى الاستثنائية</h3>
+                        <p>First Class Suite</p>
+                    </div>
+                    <ul class="cabin-features">
+                        <li><i class="fa-solid fa-circle-check"></i> أجنحة خاصة مغلقة لخصوصية تامة</li>
+                        <li><i class="fa-solid fa-circle-check"></i> طاهٍ شخصي مخصص على متن الطائرة</li>
+                        <li><i class="fa-solid fa-circle-check"></i> خدمة الاستقبال السريع والترحيب Meet & Greet</li>
+                        <li><i class="fa-solid fa-circle-check"></i> نقل بسيارة ليموزين مجاناً من وإلى المطار</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         إضافة 2: شريط شركاء النجاح من الخطوط الجوية (Airlines Logos Slider)
+         ========================================================================== -->
+    <section class="airlines-partners-section">
+        <div class="container-flights">
+            <div class="airlines-slider-wrapper">
+                <div class="airlines-track">
+                    <!-- التكرار هنا لعمل حركة لانهائية بسلاسة بالـ CSS -->
+                    <div class="airline-logo-item"><i class="fa-solid fa-plane-up"></i> الخطوط السعودية</div>
+                    <div class="airline-logo-item"><i class="fa-solid fa-plane-up"></i> طيران الإمارات</div>
+                    <div class="airline-logo-item"><i class="fa-solid fa-plane-up"></i> الخطوط القطرية</div>
+                    <div class="airline-logo-item"><i class="fa-solid fa-plane-up"></i> الخطوط التركية</div>
+                    <div class="airline-logo-item"><i class="fa-solid fa-plane-up"></i> الطيران البريطاني</div>
+                    <!-- تكرار العناصر لضمان انسيابية الحركة -->
+                    <div class="airline-logo-item"><i class="fa-solid fa-plane-up"></i> الخطوط السعودية</div>
+                    <div class="airline-logo-item"><i class="fa-solid fa-plane-up"></i> طيران الإمارات</div>
+                    <div class="airline-logo-item"><i class="fa-solid fa-plane-up"></i> الخطوط القطرية</div>
+                    <div class="airline-logo-item"><i class="fa-solid fa-plane-up"></i> الخطوط التركية</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- بداية تذييل الموقع (Footer) -->
+    <footer class="main-footer">
+        <div class="container-footer">
+            
+            <!-- العمود الأول: عن المكتب واللوجو -->
+            <div class="footer-col footer-about">
+                <div class="footer-logo">
+                    <a href="../index.html" class="brand-link-footer">
+                        <img src="../assets/logo.webp" alt="أوتاد للسفر الفاخر وحلول الأعمال">
+                        
+                        <div class="brand-text">
+                            <span class="brand-title">أوتاد للسفر الفاخر وحلول الأعمال</span>
+                            <small class="brand-slogan">
+                                المقام اللوجستي الأول لبعثات النخبة، والمعيار المعتمد لرحلات الطيران الخاص
+                            </small>
+                        </div>
+                    </a>
+                </div>
+                <p class="footer-desc-text">مكتب سفر وسياحة رائد مخصص لتقديم حلول لوجستية فاخرة ومتكاملة لرجال الأعمال، الشركات، والأفراد بأعلى معايير الرفاهية والأمان.</p>
+                <div class="social-links">
+                    <a href="#" title="فيسبوك"><i class="fab fa-brands fa-facebook-f"></i></a>
+                    <a href="#" title="انستغرام"><i class="fab fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- العمود الثاني: روابط سريعة للخدمات الأساسية -->
+            <div class="footer-col">
+                <h3>خدماتنا الأساسية</h3>
+                <ul class="footer-links">
+                    <li><a href="./flights.html"><i class="fas fa-chevron-left"></i> حجز وتعديل الطيران</a></li>
+                    <li><a href="./accommodation.html"><i class="fas fa-chevron-left"></i> الفنادق والمنتجعات</a></li>
+                    <li><a href="./papers.html"><i class="fas fa-chevron-left"></i> استخراج التأشيرات</a></li>
+                    <li><a href="./tours.html"><i class="fas fa-chevron-left"></i> البرامج السياحية</a></li>
+                </ul>
+            </div>
+
+            <!-- العمود الثالث: خدمات الشركات والمتقدمة -->
+            <div class="footer-col">
+                <h3>خدمات متقدمة</h3>
+                <ul class="footer-links">
+                    <li><a href="./corporate.html"><i class="fas fa-chevron-left"></i> إدارة سفر الشركات</a></li>
+                    <li><a href="./private-charter.html"><i class="fas fa-chevron-left"></i> تأجير الطائرات الخاصة</a></li>
+                    <li><a href="./special-tours.html"><i class="fas fa-chevron-left"></i> السياحة العلاجية والتعليمية</a></li>
+                    <li><a href="./contact.html"><i class="fas fa-chevron-left"></i> خطط التقسيط والتمويل</a></li>
+                </ul>
+            </div>
+
+            <!-- العمود الرابع: معلومات الاتصال والدعم -->
+            <div class="footer-col footer-contact">
+                <h3>تواصل معنا</h3>
+                <ul class="contact-info-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>برج الرفاهية التجاري، الطابق 14، الرياض، المملكة العربية السعودية</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span dir="ltr">+966 5X XXX XXXX</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>info@yourdomain.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <span>دعم العملاء: 24 ساعة / 7 أيام</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- شريط الحقوق السفلي -->
+        <div class="footer-bottom">
+            <div class="container-bottom">
+                <p>&copy; 2026 <span>أوتاد للسفر الفاخر وحلول الأعمال</span>. جميع الحقوق محفوظة.</p>
+                <div class="bottom-links">
+                    <a href="./privacy-policy.html">سياسة الخصوصية</a>
+                    <a href="./cookies-policy.html">سياسة الكوكيز</a>
+                    <a href="./terms-conditions.html">الشروط والأحكام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- استدعاء ملف الـ JS الخارجي الموحد والخروج خطوة للمجلد الرئيسي -->
+<script src="../js/script.js"></script>
+<script src="../js/flights.js"></script>
+</body>
+</html>

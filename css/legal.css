@@ -1,0 +1,74 @@
+/* تنسيقات صفحات النصوص القانونية الفاخرة */
+.legal-pages-body {
+    background-color: var(--bg-ivory) !important; /* قاعدة عاجية دافئة ووقورة مريحة جداً للقراءة الطويلة */
+    color: var(--primary-dark);
+}
+
+.legal-document-section {
+    padding: 60px 0 100px 0;
+}
+
+.container-legal {
+    width: 85%; max-width: 900px; margin: 0 auto; /* صندوق عرض عريض ومحدد لتأطير القراءة */
+}
+
+/* ورقة النص الفخمة البيضاء المرتفعة بظلال ناعمة */
+.legal-paper-box {
+    background-color: #ffffff;
+    padding: 60px 50px;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(21, 34, 56, 0.04);
+    border: 1px solid rgba(21, 34, 56, 0.03);
+    text-align: center;
+}
+
+.legal-header-icons {
+    font-size: 48px;
+    color: var(--accent-gold); /* درع الأمان يضيء بذهب الغروب */
+    margin-bottom: 20px;
+}
+
+.legal-paper-box h1 {
+    font-size: 30px; font-weight: 700; color: var(--primary-dark); margin-bottom: 10px;
+}
+
+.legal-date-update {
+    font-size: 12.5px; color: var(--text-muted); font-weight: 600; margin-bottom: 40px; display: inline-block; padding: 4px 15px; background-color: var(--bg-ivory); border-radius: 4px;
+}
+
+/* تنسيق المتون القانونية والبند الفردي */
+.legal-content-body { text-align: right; } /* إعادة القراءة للاتجاه العربي الصحيح */
+
+.legal-intro-text {
+    font-size: 15px; line-height: 1.8; color: var(--primary-dark); margin-bottom: 35px; text-align: justify;
+}
+
+.legal-clause-block {
+    margin-bottom: 35px;
+}
+.legal-clause-block:last-child { margin-bottom: 0; }
+
+.legal-clause-block h3 {
+    font-size: 18px; font-weight: 700; color: var(--primary-dark); margin-bottom: 12px; border-right: 3px solid var(--accent-gold); padding-right: 12px; /* خط ذهبي جانبي أيمن فخم جداً للعناوين */
+}
+
+.legal-clause-block p {
+    font-size: 14px; line-height: 1.7; color: var(--text-muted); text-align: justify; margin-bottom: 15px;
+}
+
+/* القوائم المدعومة بعلامات التشيك الملونة بدقة الهوية */
+.legal-clause-block ul { list-style: none; padding-right: 10px; }
+.legal-clause-block ul li {
+    font-size: 13.5px; margin-bottom: 10px; display: flex; align-items: flex-start; gap: 10px; line-height: 1.6; color: var(--primary-dark);
+}
+.legal-clause-block ul li i {
+    color: var(--secondary-teal); /* علامات الصح تضيء بالأخضر الواحي للراحة البصرية والامتثال */
+    font-size: 15px; margin-top: 3px;
+}
+
+/* تجاوب الصفحات القانونية مع أجهزة الجوال */
+@media (max-width: 768px) {
+    .legal-paper-box { padding: 40px 20px; }
+    .legal-paper-box h1 { font-size: 24px; }
+    .legal-clause-block h3 { font-size: 16px; }
+}

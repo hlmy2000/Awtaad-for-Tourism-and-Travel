@@ -1,0 +1,476 @@
+
+/* تنسيقات الواجهة السينمائية بالفيديو */
+.charter-hero {
+    position: relative;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    color: var(--bg-ivory);
+}
+
+.charter-hero-video {
+    position: absolute;
+    top: 50%; left: 50%;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    object-fit: cover;
+}
+
+.charter-video-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(rgba(21, 34, 56, 0.5), rgba(21, 34, 56, 0.5));
+    z-index: 2;
+}
+
+.position-relative { position: relative; z-index: 3; padding: 0 20px; }
+
+.charter-hero h1 {
+    font-size: 44px; font-weight: 700; margin-bottom: 15px; color: var(--accent-gold); text-shadow: 2px 2px 12px rgba(0,0,0,0.6);
+}
+.charter-hero p {
+    font-size: 18px; max-width: 700px; margin: 0 auto; color: var(--bg-ivory); line-height: 1.6; text-shadow: 1px 1px 8px rgba(0,0,0,0.5);
+}
+
+/* تنسيق قسم صالة عرض الأسطول الفخم */
+.fleet-showroom-section {
+    padding: 100px 0;
+    background-color: var(--bg-ivory); /* خلفية عاجية راقية لتبزر الكروت البيضاء */
+}
+
+.container-charter {
+    width: 85%; max-width: 1200px; margin: 0 auto;
+}
+
+/* شبكة الأسطول */
+.fleet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 35px;
+    margin-top: 50px;
+}
+
+.fleet-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(21, 34, 56, 0.03);
+    border: 1px solid rgba(21, 34, 56, 0.02);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.fleet-card:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(21, 34, 56, 0.06); }
+
+/* تمييز الكرت الأوسط (النفاثة المتوسطة) بالبرستيج والحدود الذهبية */
+.fleet-card.featured-fleet-card {
+    border: 2px solid var(--accent-gold);
+    transform: scale(1.02);
+}
+.fleet-card.featured-fleet-card:hover { transform: scale(1.02) translateY(-8px); }
+
+.fleet-hot-badge {
+    position: absolute; top: -15px; right: 20px;
+    background-color: var(--accent-gold); color: var(--primary-dark);
+    padding: 5px 14px; border-radius: 4px; font-size: 11px; font-weight: 700; z-index: 10;
+}
+
+.fleet-img-box {
+    height: 230px; position: relative; overflow: hidden;
+}
+.fleet-img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+.fleet-card:hover .fleet-img-box img { transform: scale(1.04); }
+
+.fleet-badge {
+    position: absolute; bottom: 15px; right: 15px;
+    padding: 4px 12px; border-radius: 4px; font-size: 11px; font-weight: 700; color: var(--bg-ivory); background-color: var(--primary-dark);
+}
+.gold-badge { background-color: var(--accent-gold); color: var(--primary-dark); }
+.brick-badge { background-color: var(--alert-brick); }
+
+.fleet-card-body { padding: 30px; display: flex; flex-direction: column; justify-content: space-between; flex: 1; }
+.fleet-card-body h3 { font-size: 20px; font-weight: 700; color: var(--primary-dark); margin-bottom: 12px; }
+.fleet-card-body p { font-size: 13.5px; line-height: 1.7; color: var(--text-muted); margin-bottom: 20px; }
+
+/* مواصفات وحمولات الطائرات الفنية */
+.fleet-specs {
+    display: flex; justify-content: space-between;
+    padding-top: 15px; border-top: 1px solid rgba(21, 34, 56, 0.06);
+    font-size: 13px; font-weight: 700; color: var(--primary-dark);
+}
+.fleet-specs i { color: var(--accent-gold); margin-left: 5px; }
+
+@media (max-width: 992px) {
+    .fleet-card.featured-fleet-card { transform: scale(1); }
+    .fleet-card.featured-fleet-card:hover { transform: translateY(-8px); }
+    .charter-hero h1 { font-size: 32px; }
+}
+
+/* ==========================================================================
+   تنسيقات صندوق حاسبة ومحاكاة أسعار الطيران الخاص التفاعلية
+   ========================================================================== */
+.charter-calculator-section {
+    padding: 100px 0;
+    background-color: #ffffff; /* التناوب للون الأبيض الناصع لإبراز صندوق الحاسبة */
+}
+
+.charter-calc-box {
+    display: flex;
+    background-color: var(--bg-ivory); /* لون عاجي دافئ كقاعدة مريحة للعين */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(21, 34, 56, 0.05);
+    border: 1px solid rgba(21, 34, 56, 0.03);
+    margin-top: 50px;
+    color: var(--primary-dark);
+}
+
+/* الجانب الأيسر للمدخلات */
+.charter-inputs-side {
+    flex: 1.4;
+    padding: 50px 40px;
+}
+.charter-inputs-side h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+.charter-instruction { font-size: 13px; color: var(--text-muted); margin-bottom: 30px; }
+
+/* تنسيق السلايدر المتطور لساعات الطيران */
+.charter-slider-wrapper { margin-bottom: 25px; }
+.charter-slider-wrapper label { display: block; font-size: 14px; font-weight: 700; margin-bottom: 12px; }
+.gold-text-highlight { color: var(--accent-gold); font-weight: 700; }
+
+.charter-custom-slider {
+    width: 100%; -webkit-appearance: none; height: 8px; border-radius: 5px; background: #dfdbd3; outline: none; cursor: pointer;
+}
+.charter-custom-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none; width: 22px; height: 22px; border-radius: 50%; background: var(--accent-gold); border: 2px solid var(--primary-dark); transition: transform 0.2s;
+}
+.charter-custom-slider::-webkit-slider-thumb:hover { transform: scale(1.2); }
+
+.charter-range-labels { display: flex; justify-content: space-between; font-size: 11px; color: var(--text-muted); font-weight: 700; margin-top: 8px; }
+
+/* الدروب داون المخصص للفئات */
+.charter-input-group { margin-bottom: 30px; }
+.charter-input-group label { display: block; font-size: 14px; font-weight: 700; margin-bottom: 10px; }
+.charter-input-group label i { color: var(--accent-gold); margin-left: 3px; }
+
+.charter-custom-select {
+    width: 100%; padding: 12px 15px; border-radius: 4px; border: 1px solid rgba(21, 34, 56, 0.15); background-color: #ffffff; font-family: var(--main-font); font-size: 14px; color: var(--primary-dark); outline: none; cursor: pointer; transition: border-color 0.3s;
+}
+.charter-custom-select:focus { border-color: var(--accent-gold); }
+
+/* أزرار التشيك بوكس المخصصة الفاخرة للميزات المضافة */
+.addons-main-title { display: block; font-size: 14px; font-weight: 700; margin-bottom: 15px; color: var(--primary-dark); }
+.charter-services-addons { display: flex; flex-direction: column; }
+.addon-checkbox-row { display: flex; flex-direction: column; gap: 14px; }
+
+.addon-container { display: flex; align-items: center; gap: 12px; position: relative; cursor: pointer; user-select: none; }
+.addon-container input { position: absolute; opacity: 0; cursor: pointer; height: 0; width: 0; }
+.addon-checkmark { height: 20px; width: 22px; background-color: #ffffff; border: 1px solid rgba(21, 34, 56, 0.15); border-radius: 4px; flex-shrink: 0; position: relative; transition: all 0.3s; }
+.addon-container:hover input ~ .addon-checkmark { border-color: var(--accent-gold); }
+.addon-container input:checked ~ .addon-checkmark { background-color: var(--primary-dark); border-color: var(--primary-dark); }
+.addon-checkmark::after { content: ""; position: absolute; display: none; left: 7px; top: 3px; width: 5px; height: 10px; border: solid var(--bg-ivory); border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.addon-container input:checked ~ .addon-checkmark::after { display: block; }
+.addon-container p { font-size: 13px; line-height: 1.5; color: var(--text-muted); font-weight: 600; }
+.addon-container input:checked ~ p { color: var(--primary-dark); }
+
+/* الجانب الأيمن لعرض ميزانية الأثرياء الملون بالكحلي اللامع */
+.charter-results-side {
+    flex: 1; background-color: var(--primary-dark); color: var(--bg-ivory); padding: 50px 40px; display: flex; align-items: center; justify-content: center; border-right: 1px solid rgba(21, 34, 56, 0.05);
+}
+.charter-result-inner { text-align: center; width: 100%; }
+.charter-result-icon { font-size: 45px; color: var(--accent-gold); margin-bottom: 15px; }
+.charter-result-inner h4 { font-size: 15px; color: #dfdbd3; font-weight: 600; margin-bottom: 8px; }
+
+.charter-total-price { font-size: 46px; font-weight: 700; color: var(--accent-gold); margin-bottom: 15px; } /* سعر الطائرة يتوهج بالذهبي الفخم */
+.charter-tax-note { font-size: 11px; color: #dfdbd3; line-height: 1.5; text-align: justify; text-align-last: center; }
+
+/* تجاوب حاسبة الطيران المتقدم مع الهواتف والتابلت */
+@media (max-width: 768px) {
+    .charter-calc-box { flex-direction: column; }
+    .charter-inputs-side, .charter-results-side { padding: 35px 20px; }
+}
+
+/* ==========================================================================
+   تنسيقات صفوف اللوجستيات المتقدمة المتبادلة (Alternating Layout)
+   ========================================================================== */
+.charter-logistics-section {
+    padding: 100px 0;
+    background-color: #ffffff; /* تباين ناصع مع القسم العاجي للحاسبة */
+    color: var(--primary-dark);
+}
+
+.logistics-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+.logistics-row:last-child { margin-bottom: 0; }
+
+/* خاصية قلب الصف الثاني هندسياً بحركة Flex */
+.logistics-row-reverse {
+    flex-direction: row-reverse;
+}
+
+/* نصوص لوجستيات النخبة */
+.logistics-text-side {
+    flex: 1;
+}
+
+.logistics-text-side h3 {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 15px 0;
+    color: var(--primary-dark);
+}
+
+.logistics-text-side p {
+    font-size: 14.5px;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* الشارات الملونة بدقة متناهية بحسب الهوية المعتمدة */
+.logistics-badge-tag {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.gold-log-badge { background-color: rgba(185, 137, 61, 0.12); color: var(--accent-gold); border: 1px solid var(--accent-gold); }
+.brick-log-badge { background-color: rgba(156, 74, 45, 0.12); color: var(--alert-brick); border: 1px solid var(--alert-brick); }
+
+/* القوائم المدعومة بالأيقونات الذهبية */
+.logistics-features-list {
+    list-style: none;
+}
+.logistics-features-list li {
+    font-size: 14px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+.logistics-features-list li i {
+    color: var(--accent-gold);
+    font-size: 15px;
+}
+
+/* جانب ألبوم الصور اللوجستي الفخم */
+.logistics-img-side {
+    flex: 1;
+}
+.logistics-img-side img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(21, 34, 56, 0.08);
+    border: 1px solid rgba(21, 34, 56, 0.02);
+    transition: transform 0.4s ease;
+}
+.logistics-img-side:hover img {
+    transform: scale(1.02); /* زووم خفيف لكسر الرتابة البصرية */
+}
+
+/* تجاوب الصفوف اللوجستية مع هواتف الموبايل والتابلت */
+@media (max-width: 992px) {
+    .logistics-row, .logistics-row-reverse {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+    .logistics-img-side img { height: 400px; }
+    .logistics-text-side h3 { font-size: 22px; }
+}
+
+/* ==========================================================================
+   تنسيقات جدول مقارنة الرفاهية والضيافة على متن الطائرة (SLA)
+   ========================================================================== */
+.inflight-table-section {
+    padding: 100px 0;
+    background-color: var(--bg-ivory); /* التناوب للعاجي الدافئ لتبديل مظهر العين الممتع */
+}
+
+.charter-table-responsive {
+    width: 100%;
+    overflow-x: auto; /* يسمح بالتمرير الأفقي في الجوال لحماية الهيكل */
+    box-shadow: 0 10px 30px rgba(21, 34, 56, 0.04);
+    border-radius: 8px;
+    margin-top: 40px;
+    background-color: #ffffff;
+    border: 1px solid rgba(21, 34, 56, 0.05);
+}
+
+.charter-compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: right;
+    font-size: 14.5px;
+    color: var(--primary-dark);
+}
+
+.charter-compare-table th {
+    background-color: var(--primary-dark); /* هيدر الجدول كحلي ملكي */
+    color: var(--bg-ivory);
+    padding: 18px 20px;
+    font-weight: 700;
+}
+
+.charter-compare-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(21, 34, 56, 0.06);
+    line-height: 1.6;
+}
+
+/* حركة تظليل ذهبية ناعمة جداً عند التمرير بالماوس */
+.charter-compare-table tbody tr:hover {
+    background-color: rgba(185, 137, 61, 0.02); 
+}
+
+/* تمييز عمود الطائرات عابرة القارات بالذهبي البراق */
+.highlight-gold-text {
+    font-weight: 600;
+    color: var(--accent-gold) !important;
+}
+
+/* تجاوب جداول الطيران الخاص مع الموبايل والتابلت */
+@media (max-width: 768px) {
+    .charter-compare-table { font-size: 12.5px; }
+    .charter-compare-table th, .charter-compare-table td { padding: 12px 10px; }
+}
+
+/* ==========================================================================
+   1. تنسيقات كروت مسارات ونطاق الطيران الخاص
+   ========================================================================== */
+.charter-destinations-section, .aviation-safety-section {
+    padding: 100px 0;
+    background-color: #ffffff; /* خلفية بيضاء لتعزيز المظهر الرسمي والدقيق */
+    color: var(--primary-dark);
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.route-card-fahm {
+    background-color: var(--bg-ivory);
+    padding: 40px 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(21, 34, 56, 0.04);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+.route-card-fahm:hover { transform: translateY(-8px); box-shadow: 0 12px 25px rgba(21, 34, 56, 0.05); }
+
+/* تمييز كرت مسار دبي-جنيف الحصري باللون الكحلي والذهبي البراق */
+.route-card-fahm.featured-route-fahm {
+    background-color: var(--primary-dark);
+    color: var(--bg-ivory);
+    border: 2px solid var(--accent-gold);
+}
+
+.route-badge-fahm {
+    position: absolute; top: -15px; left: 20px;
+    padding: 4px 12px; border-radius: 4px;
+    font-size: 11px; font-weight: 700; color: var(--bg-ivory);
+    background-color: var(--secondary-teal);
+}
+.gold-route-badge { background-color: var(--accent-gold); color: var(--primary-dark); }
+.brick-route-badge { background-color: var(--alert-brick); }
+
+.route-header-fahm { border-bottom: 1px solid rgba(21, 34, 56, 0.08); padding-bottom: 15px; margin-bottom: 20px; }
+.featured-route-fahm .route-header-fahm { border-bottom-color: rgba(255,255,255,0.08); }
+
+.route-header-fahm h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+.route-header-fahm h3 i { font-size: 14px; color: var(--accent-gold); }
+
+.route-airport { font-size: 12px; color: var(--text-muted); font-weight: 600; }
+.route-airport i { color: var(--accent-gold); margin-left: 3px; }
+.featured-route-fahm .route-airport { color: #dfdbd3; }
+
+.route-details-list { list-style: none; }
+.route-details-list li { font-size: 13.5px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; color: var(--primary-dark); }
+.featured-route-fahm .route-details-list li { color: #dfdbd3; }
+.route-details-list li i { color: var(--accent-gold); font-size: 15px; }
+
+/* ==========================================================================
+   2. تنسيقات مستشار تخصيص مقصورة الطائرة التفاعلي الجديد
+   ========================================================================== */
+.suite-customizer-section {
+    padding: 100px 0;
+    background-color: var(--bg-ivory); /* التناوب للعاجي الدافئ */
+    color: var(--primary-dark);
+}
+
+.customizer-container-box {
+    display: flex; background-color: #ffffff; border-radius: 12px; overflow: hidden; border: 1px solid rgba(21, 34, 56, 0.04); margin-top: 50px; box-shadow: 0 15px 40px rgba(21, 34, 56, 0.04);
+}
+
+.cust-inputs-side { flex: 1.4; padding: 50px 40px; }
+.cust-inputs-side h3 { font-size: 18px; font-weight: 700; margin-bottom: 25px; }
+
+.cust-group label { display: block; font-size: 14px; font-weight: 700; color: var(--primary-dark); margin-bottom: 12px; }
+
+/* مجموعات أزرار الخيارات التفاعلية التبديلية */
+.cust-btn-group { display: flex; gap: 10px; flex-wrap: wrap; }
+.cust-opt-btn {
+    background-color: var(--bg-ivory); border: 1px solid rgba(21, 34, 56, 0.05); color: var(--primary-dark); padding: 10px 18px; border-radius: 4px; font-weight: 600; font-size: 13px; cursor: pointer; transition: all 0.3s ease; font-family: var(--main-font);
+}
+.cust-opt-btn:hover { background-color: var(--primary-dark); color: var(--bg-ivory); }
+.cust-opt-btn.active-cust-opt { background-color: var(--primary-dark); border-color: var(--primary-dark); color: var(--bg-ivory); border-right: 4px solid var(--accent-gold); }
+
+/* جانب عرض وثيقة التخصيص المنعكس بالكامل بالكحلي الفخم */
+.cust-results-side {
+    flex: 1; background-color: var(--primary-dark); color: var(--bg-ivory); padding: 50px 40px; display: flex; align-items: center; justify-content: center; border-right: 1px solid rgba(21, 34, 56, 0.05);
+}
+.cust-result-inner { text-align: center; width: 100%; }
+.cust-icon-top { font-size: 42px; color: var(--accent-gold); margin-bottom: 15px; }
+.cust-result-inner h4 { font-size: 15px; color: #dfdbd3; font-weight: 600; margin-bottom: 20px; }
+
+/* بنود التخصيص المنبثقة حية أمام الزبون */
+.summary-item-fahm {
+    font-size: 14px; color: #dfdbd3; background-color: rgba(255,255,255,0.05); padding: 12px 15px; border-radius: 4px; display: block; margin-bottom: 12px; border-right: 3px solid var(--accent-gold); text-align: right;
+}
+.summary-item-fahm span { color: var(--accent-gold); font-weight: 700; margin-right: 5px; }
+
+.cust-feedback-note { font-size: 11px; color: #dfdbd3; line-height: 1.5; margin-top: 15px; }
+
+/* ==========================================================================
+   3. كروت معايير الأمان والامتثال الدولي المضافة
+   ========================================================================== */
+.safety-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 50px; }
+.safety-card {
+    background-color: var(--bg-ivory); padding: 40px 30px; border-radius: 8px; border: 1px solid rgba(21, 34, 56, 0.03); text-align: center; transition: all 0.3s;
+}
+.safety-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(21, 34, 56, 0.05); border-bottom: 3px solid var(--accent-gold); }
+.safety-icon { font-size: 38px; color: var(--primary-dark); margin-bottom: 15px; transition: color 0.3s; }
+.safety-card:hover .safety-icon { color: var(--accent-gold); }
+.safety-card h3 { font-size: 18px; font-weight: 700; color: var(--primary-dark); margin-bottom: 12px; }
+.safety-card p { font-size: 13px; line-height: 1.7; color: var(--text-muted); }
+
+/* تجاوب العناصر الإضافية للموبايل */
+@media (max-width: 768px) {
+    .customizer-container-box { flex-direction: column; }
+    .cust-inputs-side, .cust-results-side { padding: 35px 20px; }
+}

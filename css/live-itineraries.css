@@ -1,0 +1,209 @@
+
+/* ==========================================================================
+   تنسيقات لوحة الرحلات القائمة والحجوزات (VIP Dashboard Mode)
+   ========================================================================== */
+body {
+    background-color: var(--bg-ivory); /* جعل أرضية اللوحة بالكامل بلون عاجي ملكي دافئ وفخم */
+    color: var(--primary-dark);
+}
+
+/* تصفير هوامش البداية لضمان استقرار الهيدر الموحد في القمة بلا فراغات */
+.main-header {
+    /* border-bottom: 1px solid rgba(21, 34, 56, 0.06); */
+    /* background-color: #ffffff; */
+}
+
+/* تنسيقات قسم الجدول العام */
+.live-monitor-section {
+    padding: 60px 0;
+}
+
+.container-live {
+    width: 85%; max-width: 1200px; margin: 0 auto;
+}
+
+/* تنسيق هيكل الجدول التنفيذي المطور */
+.live-table-responsive {
+    width: 100%;
+    overflow-x: auto; /* حماية الهيكل البرمجي على شاشات الجوال */
+    box-shadow: 0 15px 40px rgba(21, 34, 56, 0.04);
+    border-radius: 12px;
+    background-color: #ffffff;
+    border: 1px solid rgba(21, 34, 56, 0.04);
+    margin-top: 30px;
+}
+
+.live-compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: right;
+    font-size: 14px;
+}
+
+.live-compare-table th {
+    background-color: var(--primary-dark); /* هيدر كحلي وقور وثقيل */
+    color: var(--bg-ivory);
+    padding: 20px;
+    font-weight: 700;
+    border-bottom: 3px solid var(--accent-gold);
+}
+
+.live-compare-table td {
+    padding: 18px 20px;
+    border-bottom: 1px solid rgba(21, 34, 56, 0.05);
+    color: var(--primary-dark);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   التكتيك البصري: تمييز الرحلات الفاخرة (VIP) عن الرحلات التجارية العادية
+   ========================================================================== */
+/* أ) تمييز الصفوف الفاخرة بخلفية زجاجية عاجية مبهرة وتأثير ذهبي ملفت */
+.row-vip-luxury {
+    background-color: rgba(185, 137, 61, 0.03); /* تظليل ذهبي ورمادي خفيف جداً للصف بالكامل */
+}
+.row-vip-luxury:hover {
+    background-color: rgba(185, 137, 61, 0.06); /* زيادة الإضاءة عند التحويم */
+}
+.vip-group-name {
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+.trip-code-text {
+    font-size: 14.5px;
+    color: var(--primary-dark);
+}
+
+/* ب) شارات تصنيفات فئات السفر المتقدمة بدقة متناهية */
+.flight-class-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+/* شارة الـ VIP الفخمة بالكحلي والذهبي البراق */
+.class-vip {
+    background-color: var(--primary-dark);
+    color: var(--accent-gold);
+    border: 1px solid var(--accent-gold);
+}
+/* شارة التجاري العادي بالأخضر الواحي المريح */
+.class-commercial {
+    background-color: rgba(46, 107, 103, 0.1);
+    color: var(--secondary-teal);
+    border: 1px solid var(--secondary-teal);
+}
+
+/* ج) شارات الحالة الحية والنبض الدائري المستمر بالـ CSS */
+.live-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11.5px;
+    font-weight: 700;
+}
+.badge-active { background-color: rgba(46, 107, 103, 0.1); color: var(--secondary-teal); border: 1px solid var(--secondary-teal); }
+.badge-ready { background-color: rgba(185, 137, 61, 0.1); color: var(--accent-gold); border: 1px solid var(--accent-gold); }
+.badge-complete { font-weight: 600; color: var(--text-muted); font-size: 12px; }
+
+.pulse-dot { width: 8px; height: 8px; background-color: #2ecc71; border-radius: 50%; position: relative; }
+.pulse-dot::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; border: 2px solid #2ecc71; animation: pulseGreen 1.6s infinite ease-out; }
+.gold-dot { background-color: var(--accent-gold); }
+.gold-dot::after { border-color: var(--accent-gold); }
+
+@keyframes pulseGreen {
+    0% { transform: scale(0.8); opacity: 1; }
+    100% { transform: scale(2.2); opacity: 0; }
+}
+
+/* تجاوب الجدول المطور على الموبايل والتابلت */
+@media (max-width: 992px) {
+    .live-compare-table { font-size: 12.5px; }
+    .live-compare-table th, .live-compare-table td { padding: 14px 10px; }
+}
+
+/* تحسين مقروئية البيانات الكثيرة وحماية الأسطر من الالتفاف العشوائي */
+.live-compare-table td, .live-compare-table th {
+    white-space: nowrap; /* حماية هندسة الخلايا التنفيذية */
+}
+
+/* حركة تلوين ناعمة عند مرور الماوس على الرحلات التجارية لتبدو متفاعلة وثقيلة أيضاً */
+.row-commercial:hover {
+    background-color: rgba(21, 34, 56, 0.02);
+    transition: background-color 0.2s ease;
+}
+
+/* تأثير الخطوط التناوبية الخفيفة للرحلات التجارية لزيادة عمق هندسة الويب */
+.row-commercial:nth-child(even) {
+    background-color: rgba(21, 34, 56, 0.01);
+}
+
+/* ضبط انسيابية الحركة وثبات الخلايا لتظهر كـ Dashboard حقيقية */
+.live-compare-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+/* ==========================================================================
+   تنسيقات كروت معايير الأمان والامتثال الدولي أسفل الجدول
+   ========================================================================== */
+.live-safety-standards-section {
+    padding: 80px 0;
+    background-color: #ffffff; /* تباين ناصع يعطي ارتياحاً بصرياً ممتازاً للعين */
+}
+
+.live-safety-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.live-safety-card {
+    background-color: var(--bg-ivory); /* كروت عاجية مريحة فوق الخلفية البيضاء للقسم */
+    padding: 40px 30px; border-radius: 8px; text-align: center;
+    border: 1px solid rgba(21, 34, 56, 0.03);
+    transition: all 0.3s ease;
+}
+.live-safety-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(21, 34, 56, 0.04);
+    border-bottom: 3px solid var(--accent-gold); /* مؤشر خط سفلي ذهبي تفاعلي */
+}
+
+.live-safety-icon { font-size: 38px; color: var(--primary-dark); margin-bottom: 15px; transition: color 0.3s; }
+.live-safety-card:hover .live-safety-icon { color: var(--accent-gold); } /* الأيقونة تضاء بالذهبي عند التحويم */
+
+.live-safety-card h3 { font-size: 18px; font-weight: 700; color: var(--primary-dark); margin-bottom: 12px; }
+.live-safety-card p { font-size: 13px; line-height: 1.7; color: var(--text-muted); text-align: justify; text-align-last: center; }
+
+/* ==========================================================================
+   تنسيقات شريط الـ Banner العريض والزر التنفيذي الضخم النابض
+   ========================================================================== */
+.live-cta-banner-section {
+    padding: 80px 0;
+    background-color: var(--primary-dark); /* خلفية كحلية ليليّة تمنح فخامة بالغة */
+    color: var(--bg-ivory);
+    text-align: center;
+}
+
+.live-cta-box-inner { max-width: 750px; margin: 0 auto; padding: 0 20px; }
+
+.cta-crown-top { font-size: 44px; color: var(--accent-gold); margin-bottom: 20px; }
+
+.live-cta-box-inner h2 { font-size: 30px; font-weight: 700; color: var(--bg-ivory); margin-bottom: 12px; line-height: 1.4; }
+.live-cta-box-inner p { font-size: 15px; color: #dfdbd3; line-height: 1.7; }
+
+/* تخصيص وتكبير حجم الزر النابض بأسفل اللوحة ليكون طاغياً وبأعلى برستيج */
+.live-huge-cta-btn {
+    display: inline-block;
+    padding: 16px 45px !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    border-radius: 4px !important;
+}

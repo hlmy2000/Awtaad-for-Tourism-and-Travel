@@ -1,0 +1,208 @@
+/* تنسيقات فرعية خاصة بصفحة البرامج السياحية */
+.sub-hero {
+    /* قمنا بتخفيف الشفافية الكحلية من 0.85 إلى 0.45 لتصبح الصورة واضحة ومشرقة جداً */
+    background: linear-gradient(rgba(21, 34, 56, 0.45), rgba(21, 34, 56, 0.45)), url('../assets/tours-hero.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px 0; /* زدنا المساحة العلوية والسفلية لتعطي الصورة مدى وعمق أكبر */
+    text-align: center;
+    color: var(--bg-ivory);
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.5); /* إضافة ظل داخلي ناعم لمنح أطراف الصورة لمسة سينمائية */
+}
+
+.sub-hero-content h1 {
+    font-size: 42px; /* تكبير حجم العنوان ليزداد بريقاً */
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--accent-gold);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6); /* ظل خفيف خلف النص لضمان مقروئيته 100% فوق الصورة المشرقة */
+}
+
+.sub-hero-content p {
+    font-size: 18px;
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--bg-ivory); /* جعلنا النص عاجياً خالصاً ليتناقض بجمال مع الخلفية */
+    line-height: 1.6;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* تنسيقات جدول الرحلات والأسعار */
+.tours-table-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto; /* يسمح بالتمرير الأفقي على الموبايل لمنع تخريب التصميم */
+    box-shadow: 0 10px 30px rgba(21, 34, 56, 0.05);
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.tours-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: right;
+    font-size: 15px;
+}
+
+.tours-table th {
+    background-color: var(--primary-dark);
+    color: var(--bg-ivory);
+    padding: 18px 20px;
+    font-weight: 700;
+}
+
+.tours-table td {
+    padding: 18px 20px;
+    border-bottom: 1px solid rgba(21, 34, 56, 0.06);
+    color: var(--primary-dark);
+}
+
+.tours-table tbody tr:hover {
+    background-color: rgba(185, 137, 61, 0.03); /* تظليل ذهبي خفيف جداً عند التحويم فوق السطر */
+}
+
+.price-text {
+    font-weight: 700;
+    color: var(--accent-gold);
+}
+
+/* شارات الحالة الملونة بالجدول حسب مواصفاتك */
+.status-badge {
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.status-badge.hot { background-color: rgba(156, 74, 45, 0.15); color: var(--alert-brick); }
+.status-badge.available { background-color: rgba(185, 137, 61, 0.15); color: var(--accent-gold); }
+.status-badge.teal-status { background-color: rgba(46, 107, 103, 0.15); color: var(--secondary-teal); }
+.status-badge.limited { background-color: #f1f1f1; color: var(--text-muted); }
+
+/* تجاوب الجدول */
+@media (max-width: 768px) {
+    .tours-table { font-size: 13px; }
+    .tours-table th, .tours-table td { padding: 12px 10px; }
+}
+
+/* تنسيقات لوحة الفلترة والبحث المتقدمة */
+.filter-control-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(21, 34, 56, 0.03);
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: var(--bg-ivory);
+    border: 1px solid rgba(21, 34, 56, 0.05);
+    color: var(--primary-dark);
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active-filter {
+    background-color: var(--primary-dark);
+    color: var(--bg-ivory);
+    border-color: var(--primary-dark);
+}
+
+.filter-btn.active-filter {
+    background-color: var(--accent-gold);
+    border-color: var(--accent-gold);
+    color: var(--primary-dark);
+}
+
+/* شريط البحث */
+.search-box-wrapper {
+    position: relative;
+    width: 320px;
+    max-width: 100%;
+}
+
+#tourSearchInput {
+    width: 100%;
+    padding: 11px 40px 11px 15px;
+    border-radius: 4px;
+    border: 1px solid rgba(21, 34, 56, 0.15);
+    background-color: var(--bg-ivory);
+    font-family: var(--main-font);
+    font-size: 14px;
+    color: var(--primary-dark);
+    outline: none;
+    transition: all 0.3s;
+}
+
+#tourSearchInput:focus {
+    border-color: var(--accent-gold);
+    background-color: #ffffff;
+    box-shadow: 0 0 8px rgba(185, 137, 61, 0.2);
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%; right: 15px;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* تفاصيل الميتا أسفل الكروت */
+.tour-meta-details {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-ivory);
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--primary-dark);
+}
+.tour-meta-details i {
+    color: var(--accent-gold);
+    margin-left: 5px;
+}
+
+/* تأثير حركة الاختفاء والظهور عند الفلترة للـ JS */
+.tour-item {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(1);
+    opacity: 1;
+}
+.tour-item.hide-item {
+    transform: scale(0.8);
+    opacity: 0;
+    display: none;
+}
+
+/* تجاوب لوحة التحكم */
+@media (max-width: 768px) {
+    .filter-control-panel {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 15px;
+    }
+    .search-box-wrapper { width: 100%; }
+}

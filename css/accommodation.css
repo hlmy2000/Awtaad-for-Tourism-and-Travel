@@ -1,0 +1,323 @@
+
+/* تنسيقات واجهة صفحة الفنادق */
+.sub-hero-hotel {
+    background: linear-gradient(rgba(21, 34, 56, 0.45), rgba(21, 34, 56, 0.45)), url('../assets/hotel-hero.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px 0;
+    text-align: center;
+    color: var(--bg-ivory);
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.5);
+}
+
+.hotel-showroom {
+    padding: 100px 0;
+    background-color: var(--bg-ivory); /* خلفية عاجية دافئة لمزيد من الراحة والفخامة */
+}
+
+.container-hotel {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* شبكة كروت الفنادق */
+.hotel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.hotel-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(21, 34, 56, 0.03);
+    display: flex; /* كرت منقسم عرضياً بصورة أنيقة ومختلفة عن باقي الكروت */
+    border: 1px solid rgba(21, 34, 56, 0.02);
+    transition: transform 0.3s;
+}
+
+.hotel-card:hover {
+    transform: translateY(-5px);
+}
+
+.hotel-image-box {
+    flex: 1;
+    position: relative;
+}
+
+.hotel-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* شارات الفنادق */
+.hotel-badge-tag {
+    position: absolute;
+    top: 15px; right: 15px;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--bg-ivory);
+}
+.premium-badge { background-color: var(--primary-dark); }
+.hot-badge { background-color: var(--alert-brick); }
+
+.hotel-card-content {
+    flex: 1.2;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hotel-card-content h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 12px;
+}
+
+.hotel-card-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+/* الأيقونات والمرافق داخل الكرت */
+.hotel-amenities {
+    display: flex;
+    gap: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+.hotel-amenities i { color: var(--accent-gold); }
+
+.hotel-footer-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(21, 34, 56, 0.06);
+    padding-top: 15px;
+}
+
+.room-price-label { font-size: 13px; color: var(--text-muted); }
+.gold-color { color: var(--accent-gold); font-weight: 700; }
+
+.select-room-btn {
+    background-color: var(--primary-dark);
+    color: var(--bg-ivory);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-family: var(--main-font);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.select-room-btn:hover, .select-room-btn.active-room {
+    background-color: var(--accent-gold);
+    color: var(--primary-dark);
+}
+
+/* صندوق حاسبة الفنادق التفاعلية الفخمة */
+.hotel-calculator-box {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(21, 34, 56, 0.06);
+    border: 1px solid rgba(21, 34, 56, 0.03);
+}
+
+.hotel-calc-inputs {
+    flex: 1.4;
+    padding: 50px 40px;
+}
+.hotel-calc-inputs h3 { font-size: 18px; margin-bottom: 10px; font-weight: 700; }
+.calc-instruction { font-size: 13px; color: var(--text-muted); margin-bottom: 25px; }
+
+.selected-room-info {
+    font-size: 15px;
+    font-weight: 600;
+    background-color: var(--bg-ivory);
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    border-right: 4px solid var(--primary-dark);
+}
+
+.nights-slider-wrapper label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.hotel-custom-range {
+    width: 100%; -webkit-appearance: none; height: 8px; border-radius: 5px; background: #dfdbd3; outline: none; cursor: pointer;
+}
+.hotel-custom-range::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none; width: 22px; height: 22px; border-radius: 50%; background: var(--accent-gold); border: 2px solid var(--primary-dark); transition: transform 0.2s;
+}
+.hotel-custom-range::-webkit-slider-thumb:hover { transform: scale(1.2); }
+
+.hotel-calc-results {
+    flex: 1;
+    background-color: var(--bg-ivory);
+    padding: 50px 40px;
+    display: flex; align-items: center; justify-content: center;
+}
+.inner-result-card { text-align: center; width: 100%; }
+.result-large-icon { font-size: 40px; color: var(--accent-gold); margin-bottom: 15px; }
+.inner-result-card h4 { font-size: 15px; color: var(--text-muted); font-weight: 700; margin-bottom: 8px; }
+.hotel-total-price { font-size: 42px; font-weight: 700; color: var(--alert-brick); margin-bottom: 10px; }
+.tax-note { font-size: 11px; color: var(--text-muted); }
+
+/* تجاوب قسم الفنادق */
+@media (max-width: 992px) {
+    .hotel-grid { grid-template-columns: 1fr; }
+    .hotel-card { flex-direction: column; }
+    .hotel-card-content { flex: 0.45;}
+    .hotel-image-box { height: 220px; }
+    .hotel-calculator-box { flex-direction: column; }
+    .hotel-calc-inputs, .hotel-calc-results { padding: 30px 20px; }
+}
+
+/* تنسيقات كروت الغرف الاقتصادية والوسطى المضافة */
+.budget-hotel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.budget-card {
+    background-color: #ffffff;
+    padding: 35px 25px;
+    border-radius: 8px;
+    border: 1px solid rgba(21, 34, 56, 0.04);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.budget-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(21, 34, 56, 0.06);
+    border-color: var(--accent-gold);
+}
+
+.budget-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background-color: var(--accent-gold);
+    color: var(--primary-dark);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.budget-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+.budget-card p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.budget-price {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding: 8px 12px;
+    background-color: var(--bg-ivory);
+    border-radius: 4px;
+}
+
+.budget-price span {
+    font-size: 20px;
+    color: var(--alert-brick);
+    font-weight: 700;
+}
+
+.budget-btn {
+    width: 100%;
+    text-align: center;
+}
+
+/* ==========================================================================
+   تنسيقات جدول مقارنة أنظمة الإقامة والـ Responsive المضاف
+   ========================================================================== */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto; /* يسمح بالتمرير الأفقي الذكي في الموبايل لحماية الهيكل */
+    box-shadow: 0 10px 30px rgba(21, 34, 56, 0.04);
+    border-radius: 8px;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border: 1px solid rgba(21, 34, 56, 0.05);
+}
+
+.tours-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: right;
+    font-size: 15px;
+}
+
+.tours-table th {
+    background-color: var(--primary-dark);
+    color: var(--bg-ivory);
+    padding: 18px 20px;
+    font-weight: 700;
+}
+
+.tours-table td {
+    padding: 18px 20px;
+    border-bottom: 1px solid rgba(21, 34, 56, 0.06);
+    color: var(--primary-dark);
+    line-height: 1.6;
+}
+
+/* حركة تظليل ذهبية ناعمة جداً عند تمرير الماوس فوق سطور الجدول */
+.tours-table tbody tr:hover {
+    background-color: rgba(185, 137, 61, 0.03); 
+}
+
+/* تلوين نصوص التمييز الخاصة بالباقات الشاملة */
+.price-text {
+    font-weight: 600;
+    color: var(--secondary-teal) !important; /* لون أخضر واحة مريح للميزات الفاخرة */
+}
+
+/* تجاوب جداول الفنادق في شاشات التابلت والموبايل */
+@media (max-width: 768px) {
+    .tours-table { 
+        font-size: 13px; 
+    }
+    .tours-table th, .tours-table td { 
+        padding: 14px 12px; 
+    }
+}

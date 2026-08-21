@@ -1,0 +1,511 @@
+
+/* تنسيقات واجهة صفحة الشركات */
+.sub-hero-corporate {
+    background: linear-gradient(rgba(21, 34, 56, 0.5), rgba(21, 34, 56, 0.5)), url('../assets/corporate-hero.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px 0;
+    text-align: center;
+    color: var(--bg-ivory);
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.5);
+}
+
+.section-subtitle {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: var(--accent-gold);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.section-title {
+    font-size: clamp(2rem, 3.2vw, 3rem);
+    line-height: 1.4;
+    font-weight: 800;
+    margin-bottom: 18px;
+    color: var(--primary-dark);
+}
+
+.section-title span {
+    color: var(--accent-gold);
+}
+
+.section-desc {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.9;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+/* تنسيقات شبكة كروت الأعمال */
+.corporate-details {
+    padding: 100px 0;
+    background: linear-gradient(180deg, #ffffff 0%, #faf6ec 100%);
+}
+
+.container-corporate {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.corporate-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.corp-feature-card {
+    background-color: var(--bg-ivory); /* الكروت بلون عاجي دافئ فوق الخلفية البيضاء */
+    padding: 40px 30px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgba(21, 34, 56, 0.03);
+    transition: all 0.3s ease;
+}
+
+.corp-feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(21, 34, 56, 0.06);
+    background-color: var(--primary-dark); /* حركة تلوين كاملة للكرت إلى الكحلي عند التحويم لإبهار المشتري */
+    color: var(--bg-ivory);
+}
+
+.corp-icon {
+    font-size: 38px;
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+}
+
+.corp-feature-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.corp-feature-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-muted);
+}
+
+/* تعديل لون نص الوصف عند تحول الكرت للون الداكن في الـ Hover */
+.corp-feature-card:hover p {
+    color: #dfdbd3;
+}
+
+.corporate-spotlight {
+    padding: 80px 0 30px;
+    background: linear-gradient(180deg, #ffffff 0%, #f7f4ee 100%);
+}
+
+.spotlight-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.spotlight-media {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(21, 34, 56, 0.14);
+    border: 1px solid rgba(21, 34, 56, 0.05);
+}
+
+.spotlight-media::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(21, 34, 56, 0.10), rgba(185, 137, 61, 0.14));
+    z-index: 1;
+}
+
+.spotlight-media img {
+    display: block;
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+}
+
+.spotlight-copy {
+    text-align: right;
+}
+
+.spotlight-copy .section-title {
+    margin-bottom: 16px;
+}
+
+.spotlight-list {
+    list-style: none;
+    margin-top: 24px;
+    margin-bottom: 30px;
+    display: grid;
+    gap: 14px;
+}
+
+.spotlight-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.spotlight-list li i {
+    color: var(--accent-gold);
+    font-size: 18px;
+}
+
+/* تنسيقات قسم خطوات الشركات */
+.corporate-steps {
+    padding: 80px 0;
+    background-color: var(--bg-ivory); /* خلفية عاجية ليتناوب التباين مع الأبيض السابق */
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.step-card {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(21, 34, 56, 0.02);
+}
+
+/* رقم الخطوة الخلفي والبارز بالفخامة */
+.step-number {
+    font-size: 60px;
+    font-weight: 700;
+    color: rgba(185, 137, 61, 0.15); /* ذهبي شفاف جداً كخلفية نصية */
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    line-height: 1;
+}
+
+.step-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.step-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-muted);
+    position: relative;
+    z-index: 2;
+}
+
+/* تنسيقات حاسبة الشركات التفاعلية */
+.corporate-calculator-section {
+    padding: 100px 0;
+    background-color: var(--primary-dark); /* جعل خلفية الحاسبة كحلية فخمة لتعود لعمق الهوية */
+    color: var(--bg-ivory);
+}
+.corporate-calculator-section .section-title {
+    color: var(--bg-ivory);
+}
+.corporate-calculator-section .section-desc {
+    color: #dfdbd3;
+}
+
+/* صندوق الحاسبة المنقسم */
+.calculator-box {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    margin-top: 50px;
+    color: var(--primary-dark);
+}
+
+.calc-input-side {
+    flex: 1.3;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.calc-input-side h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/* تنسيق شريط التمرير والسحب المتحرك */
+.range-wrapper {
+    margin-bottom: 30px;
+}
+
+.custom-range-slider {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 8px;
+    border-radius: 5px;
+    background: #dfdbd3;
+    outline: none;
+    cursor: pointer;
+}
+
+.custom-range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--accent-gold);
+    border: 2px solid var(--primary-dark);
+    transition: transform 0.2s;
+}
+.custom-range-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.current-expense-display {
+    font-size: 16px;
+    font-weight: 600;
+    background-color: var(--bg-ivory);
+    padding: 12px 20px;
+    border-radius: 6px;
+    border-right: 4px solid var(--accent-gold);
+}
+#currentExpenseValue {
+    color: var(--accent-gold);
+    font-weight: 700;
+}
+
+/* الجانب الأيمن لنتائج التوفير المالي */
+.calc-result-side {
+    flex: 1;
+    background-color: var(--bg-ivory);
+    padding: 50px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgba(21, 34, 56, 0.05);
+}
+
+.result-card-inner {
+    text-align: center;
+    width: 100%;
+}
+
+.calc-result-icon {
+    font-size: 45px;
+    color: var(--secondary-teal); /* استخدام أخضر الواحة للتوفير المالي المريح */
+    margin-bottom: 15px;
+}
+
+.result-card-inner h4 {
+    font-size: 16px;
+    color: var(--text-muted);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.saved-money-amount {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--alert-brick); /* اللون القرميدي الجاذب للأرقام الضخمة */
+    margin-bottom: 15px;
+}
+
+.calc-note {
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+/* تجاوب حاسبة الشركات */
+@media (max-width: 768px) {
+    .calculator-box { flex-direction: column; }
+    .calc-input-side, .calc-result-side { padding: 30px 20px; }
+}
+
+---
+
+/* ### 🎨 2. كود التنسيق المكمل "على الثقيل" لملف (`css/corporate.css`) */
+
+/* تنسيقات الأقسام المضافة الفاخرة للشركات */
+.corporate-tiers-section, .corporate-builder-section {
+    padding: 100px 0;
+    background-color: var(--bg-ivory); /* خلفية عاجية دافئة وراقية للتناوب البصري */
+}
+
+.corporate-table-section, .mice-calendar-section {
+    padding: 100px 0;
+    background-color: #ffffff; /* تباين ناصع يعزز المظهر المهني والرسمي */
+}
+
+/* شبكة مستويات العضوية والتعاقد السنوي */
+.tiers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.tier-card {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(21, 34, 56, 0.04);
+    box-shadow: 0 5px 20px rgba(21, 34, 56, 0.02);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.tier-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(21, 34, 56, 0.06); }
+
+/* تمييز الكرت السنوي الذهبي بالكامل بالكحلي والذهبي والبرستيج الثقيل */
+.tier-card.tier-featured {
+    background-color: var(--primary-dark);
+    color: var(--bg-ivory);
+    border: 2px solid var(--accent-gold);
+}
+
+.tier-hot-badge {
+    position: absolute; top: -15px; right: 20px;
+    background-color: var(--accent-gold);
+    color: var(--primary-dark);
+    padding: 5px 12px; border-radius: 4px;
+    font-size: 11px; font-weight: 700;
+}
+
+.tier-header { text-align: center; border-bottom: 1px solid rgba(21, 34, 56, 0.08); padding-bottom: 20px; margin-bottom: 25px; }
+.tier-featured .tier-header { border-bottom-color: rgba(255,255,255,0.08); }
+.tier-header h3 { font-size: 19px; font-weight: 700; color: var(--primary-dark); margin-bottom: 5px; }
+.tier-featured .tier-header h3 { color: var(--bg-ivory); }
+.tier-header p { font-size: 12.5px; color: var(--text-muted); font-weight: 600; }
+.tier-featured .tier-header p { color: var(--accent-gold); }
+
+.tier-discount { font-size: 14px; text-align: center; color: var(--text-muted); margin-bottom: 25px; font-weight: 600; }
+.tier-featured .tier-discount { color: #dfdbd3; }
+.tier-discount span { color: var(--alert-brick); font-size: 26px; font-weight: 700; margin-right: 3px; }
+.tier-featured .tier-discount span { color: var(--accent-gold); }
+
+.tier-features { list-style: none; }
+.tier-features li { font-size: 13.5px; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; color: var(--primary-dark); }
+.tier-featured .tier-features li { color: #dfdbd3; }
+.tier-features li i { color: var(--accent-gold); font-size: 15px; }
+.tier-features li.muted-tier-feat { color: rgba(21, 34, 56, 0.3); }
+.tier-featured .tier-features li.muted-tier-feat { color: rgba(250, 246, 236, 0.3); }
+.tier-features li.muted-tier-feat i { color: var(--alert-brick); }
+
+/* ==========================================================================
+   تنسيقات جداول الـ SLA والمعارض المتجاوبة الفخمة بالهوية
+   ========================================================================== */
+.corp-table-responsive {
+    width: 100%; overflow-x: auto; border-radius: 8px; background-color: #ffffff; border: 1px solid rgba(21, 34, 56, 0.05); margin-top: 50px; box-shadow: 0 10px 30px rgba(21, 34, 56, 0.03);
+}
+.corp-compare-table { width: 100%; border-collapse: collapse; text-align: right; font-size: 14.5px; }
+.corp-compare-table th { background-color: var(--primary-dark); color: var(--bg-ivory); padding: 18px 20px; font-weight: 700; }
+.corp-compare-table td { padding: 16px 20px; border-bottom: 1px solid rgba(21, 34, 56, 0.06); color: var(--primary-dark); line-height: 1.6; }
+.corp-compare-table tbody tr:hover { background-color: rgba(185, 137, 61, 0.02); }
+.highlight-gold-text { font-weight: 600; color: var(--accent-gold) !important; }
+
+/* ==========================================================================
+   منشئ الباقات اللوجستية التفاعلي لقطاع الأعمال (Package Builder)
+   ========================================================================== */
+.builder-container-box {
+    display: flex; background-color: #ffffff; border-radius: 12px; overflow: hidden; border: 1px solid rgba(21, 34, 56, 0.04); margin-top: 50px; box-shadow: 0 15px 40px rgba(21, 34, 56, 0.04); color: var(--primary-dark);
+}
+.builder-inputs-side { flex: 1.4; padding: 50px 40px; }
+.builder-inputs-side h3 { font-size: 18px; font-weight: 700; margin-bottom: 25px; }
+.builder-checkbox-group { display: flex; flex-direction: column; gap: 20px; }
+
+/* تشيك بوكس مخصص وعالي الأناقة */
+.corp-check-container { display: flex; align-items: flex-start; gap: 15px; position: relative; cursor: pointer; user-select: none; }
+.corp-check-container input { position: absolute; opacity: 0; cursor: pointer; height: 0; width: 0; }
+.corp-checkmark { height: 22px; width: 22px; background-color: var(--bg-ivory); border: 1px solid rgba(21, 34, 56, 0.15); border-radius: 4px; flex-shrink: 0; position: relative; transition: all 0.3s; margin-top: 2px; }
+.corp-check-container:hover input ~ .corp-checkmark { border-color: var(--accent-gold); }
+.corp-check-container input:checked ~ .corp-checkmark { background-color: var(--primary-dark); border-color: var(--primary-dark); }
+.corp-checkmark::after { content: ""; position: absolute; display: none; left: 7px; top: 3px; width: 6px; height: 11px; border: solid var(--bg-ivory); border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.corp-check-container input:checked ~ .corp-checkmark::after { display: block; }
+.corp-check-container p { font-size: 13.5px; line-height: 1.6; color: var(--primary-dark); }
+.corp-check-container p strong { color: var(--text-muted); font-weight: 700; margin-left: 4px; }
+.corp-check-container input:checked ~ p strong { color: var(--accent-gold); }
+
+/* جانب عرض النتيجة الملون بالكحلي الفخم */
+.builder-results-side {
+    flex: 1; background-color: var(--primary-dark); color: var(--bg-ivory); padding: 50px 40px; display: flex; align-items: center; justify-content: center; border-right: 1px solid rgba(21, 34, 56, 0.05);
+}
+.builder-result-inner { text-align: center; width: 100%; }
+.builder-icon-top { font-size: 42px; color: var(--accent-gold); margin-bottom: 15px; }
+.builder-result-inner h4 { font-size: 15px; color: #dfdbd3; font-weight: 600; margin-bottom: 15px; }
+.generated-tier-name { font-size: 28px; font-weight: 700; color: var(--bg-ivory); margin-bottom: 15px; }
+
+.generated-discount-box { font-size: 14px; color: #dfdbd3; background-color: rgba(255,255,255,0.05); padding: 10px 15px; border-radius: 4px; display: inline-block; margin-bottom: 15px; border-right: 3px solid var(--accent-gold); }
+.generated-discount-box strong { color: var(--accent-gold); font-size: 20px; margin-right: 5px; }
+.builder-feedback { font-size: 13px; line-height: 1.6; color: #dfdbd3; }
+
+.corporate-final-cta {
+    padding: 30px 0 90px;
+    background: linear-gradient(180deg, #f9f6ef 0%, #ffffff 100%);
+}
+
+.cta-panel {
+    background: linear-gradient(135deg, rgba(21, 34, 56, 0.96) 0%, rgba(25, 48, 64, 0.96) 100%);
+    border-radius: 24px;
+    padding: 48px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    box-shadow: 0 20px 55px rgba(21, 34, 56, 0.18);
+    border: 1px solid rgba(185, 137, 61, 0.18);
+}
+
+.cta-panel .section-title,
+.cta-panel .section-desc,
+.cta-panel .section-subtitle {
+    color: var(--bg-ivory);
+}
+
+.cta-panel .section-desc {
+    max-width: 620px;
+    margin: 0;
+}
+
+.cta-panel .btn-gold {
+    white-space: nowrap;
+    min-width: 220px;
+    text-align: center;
+}
+
+/* تجاوب العناصر المضافة مع الجوال */
+@media (max-width: 992px) {
+    .builder-container-box { flex-direction: column; }
+    .builder-inputs-side, .builder-results-side { padding: 35px 20px; }
+    .corp-compare-table { font-size: 12.5px; }
+    .corp-compare-table th, .corp-compare-table td { padding: 12px 10px; }
+    .spotlight-grid { grid-template-columns: 1fr; }
+    .cta-panel { flex-direction: column; align-items: flex-start; }
+}

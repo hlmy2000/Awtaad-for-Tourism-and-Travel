@@ -1,0 +1,90 @@
+
+/* تنسيقات واجهة صفحة الخطأ 404 المتقدمة */
+.error-page-body {
+    background-color: var(--bg-ivory) !important; /* أرضية عاجية ملكية باذخة لراحة العين والبرستيج */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0; padding: 0;
+}
+
+.error-center-wrapper {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* بطاقة الخطأ الكريستالية البيضاء المرتفعة بظلال ناعمة */
+.error-card-lux {
+    background-color: #ffffff;
+    padding: 60px 45px;
+    border-radius: 12px;
+    border: 1px solid rgba(21, 34, 56, 0.04);
+    box-shadow: 0 20px 50px rgba(21, 34, 56, 0.05);
+    text-align: center;
+}
+
+/* هندسة رادار الملاحة الجوية النابض بالـ CSS حياً قدام العين */
+.error-radar-wrapper {
+    position: relative;
+    width: 90px; height: 90px;
+    margin: 0 auto 25px auto;
+    background-color: rgba(21, 34, 56, 0.02);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+}
+.error-plane-icon {
+    font-size: 34px;
+    color: var(--accent-gold); /* الطائرة المشطوبة تتوهج بذهب الغروب المعتمد */
+    position: relative; z-index: 5;
+}
+.error-radar-pulse {
+    position: absolute; width: 70px; height: 70px; border-radius: 50%;
+    background-color: rgba(185, 137, 61, 0.25); z-index: 2;
+    animation: radarErrorPulse 2.5s infinite ease-out;
+}
+@keyframes radarErrorPulse {
+    0% { transform: scale(0.6); opacity: 1; }
+    100% { transform: scale(1.9); opacity: 0; }
+}
+
+/* رقم الـ 404 العملاق المذهب الفخم */
+.error-massive-num {
+    font-size: 85px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--primary-dark); /* كحلي ليلي ثقيل وقور */
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.error-card-lux h2 {
+    font-size: 22px; font-weight: 700; color: var(--primary-dark); margin-bottom: 15px;
+}
+
+.error-desc-text {
+    font-size: 14px; line-height: 1.7; color: var(--text-muted); text-align: justify; text-align-last: center; margin-bottom: 25px;
+}
+
+/* تمييز السطر التسويقي بخط مائل وأنيق يعطي طابع القصور والبراندينج */
+.error-brand-slogan {
+    font-size: 12.5px; font-style: italic; color: var(--accent-gold); font-weight: 600; border-top: 1px solid rgba(21, 34, 56, 0.06); border-bottom: 1px solid rgba(21, 34, 56, 0.06); padding: 10px 0; margin-bottom: 35px;
+}
+
+.error-cta-action { width: 100%; }
+.error-home-btn {
+    display: inline-block; width: 100%; padding: 14px 30px !important; font-size: 15px !important; font-weight: 700 !important; border-radius: 4px !important;
+}
+
+/* التوافق التام للوضع الداكن المظلم لصفحة الخطأ بالكامل */
+body.dark-theme .error-card-lux { background-color: #1e293b; border-color: rgba(255,255,255,0.05); }
+body.dark-theme .error-massive-num, body.dark-theme .error-card-lux h2 { color: #ffffff; }
+body.dark-theme .error-desc-text { color: #94a3b8; }
+body.dark-theme .error-radar-wrapper { background-color: rgba(255,255,255,0.02); }
+
+@media (max-width: 768px) {
+    .error-card-lux { padding: 40px 20px; }
+    .error-massive-num { font-size: 65px; }
+    .error-card-lux h2 { font-size: 18px; }
+}

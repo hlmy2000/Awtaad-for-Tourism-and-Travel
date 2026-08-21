@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة رصد الحجوزات والرحلات القائمة - أوتاد للسفر الفاخر</title>
+    <meta name="description" content="لوحة تحكم عملياتية حية لرصد حركة الطيران الخاص، تنقلات الوفود الرسمية، وحالة الـ SLA الحالية وبوابات مانيـفست السفر المشفرة.">
+    <meta name="keywords" content="تتبع رحلات حياً, لوحة الحجوزات, بيان السفر, مانيـفست مشفر, رصد عملياتي">
+    <meta property="og:title" content="لوحة رصد الحجوزات والرحلات القائمة - أوتاد للسفر الفاخر">
+    <meta property="og:description" content="لوحة تحكم عملياتية حية لرصد حركة الطيران الخاص، تنقلات الوفود الرسمية، وحالة الـ SLA الحالية وبوابات مانيـفست السفر المشفرة.">
+    <meta property="og:image" content="https://awtad-luxury.com">
+
+
+    <!-- خط Cairo من Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- مكتبة الأيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- ملف الـ CSS المخصص لهذه اللوحة اللوجستية -->
+    <link rel="stylesheet" href="../css/live-itineraries.css">
+</head>
+<body>
+
+    <!-- الهيدر الموحد الفخم كبداية مباشرة للموقع -->
+    <!-- بداية الهيدر -->
+<header class="main-header">
+    <div class="container">
+        <!-- 1. زر الموبايل (الهمبرغر) - أصبح الآن على اليمين في التجاوب -->
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+
+<!-- 2. الشعار والهوية -->
+<div class="logo">
+    <a href="../index.html" class="brand-link">
+        <img src="../assets/logo.webp" alt="أوتاد للسفر الفاخر وحلول الأعمال">
+
+        <div class="brand-text">
+            <span class="brand-title">أوتاد للسفر الفاخر وحلول الأعمال</span>
+            <small class="brand-slogan">
+                المقام اللوجستي الأول لبعثات النخبة، والمعيار المعتمد لرحلات الطيران الخاص
+            </small>
+        </div>
+    </a>
+</div>
+
+        <!-- 3. قائمة التنقل -->
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li class="dropdown">
+                    <a class="title-menu">الخدمات الأساسية <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./flights.html">الطيران والنقل</a></li>
+                        <li><a href="./accommodation.html">الإقامة والمعيشة</a></li>
+                        <li><a href="./papers.html">الأوراق والوثائق</a></li>
+                        <li><a href="./tours.html">البرامج السياحية</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="title-menu">الخدمات المتقدمة <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./corporate.html">سفر الشركات</a></li>
+                        <li><a href="./private-charter.html">الطيران الخاص</a></li>
+                        <li><a href="./special-tours.html">البرامج المتخصصة</a></li>
+                    </ul>
+                </li>
+                <li><a href="./about.html">من نحن</a></li>
+                <li><a href="./contact.html">اتصل بنا</a></li>
+                <li><a href="./live-itineraries.html" class="active">الرحلات</a></li>
+            </ul>
+        </nav>
+
+        <!-- 4. زر اتخاذ إجراء سريع (CTA) -->
+        <div class="header-cta">
+            <a href="./contact.html" class="btn-gold">احجز استشارتك</a>
+        </div>
+    </div>
+</header>
+    <!-- سيتم بناء جدول الرصد اللوجستي والقائمة التفاعلية هنا مباشرة خطوة بخطوة -->
+    <!-- بداية قسم جدول رصد حركة الحجوزات والرحلات القائمة -->
+    <section class="live-monitor-section">
+        <div class="container-live">
+            
+            <!-- العناوين التنفيذية للوحة التحكم المباشرة -->
+            <div class="section-header" style="text-align: right; margin-bottom: 40px;">
+                <span class="section-subtitle">شاشة الرصد العملياتي المباشر</span>
+                <h2 class="section-title">حركة <span>الرحلات والبعثات</span> الجارية هذا الأسبوع</h2>
+                <p class="section-desc">متابعة حية لكافة جداول الطيران التنفيذي الخاص والرحلات التجارية المجدولة لوفودنا وعملائنا حول العالم.</p>
+            </div>
+
+            <!-- جدول الرصد المطور "على الثقيل" الشامل للبيانات -->
+            <div class="live-table-responsive">
+                <table class="live-compare-table">
+                    <thead>
+                        <tr>
+                            <th>كود الرحلة</th>
+                            <th>تصنيف السفر</th>
+                            <th>الجهة / الوفد المستهدف</th>
+                            <th>المسار الجوي والوجهة</th>
+                            <th>الفندق والمنتجع المختار</th>
+                            <th>حالة الحركة والـ SLA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <!-- مجموعة البيانات 1: رحلة فاخرة متميزة بالكامل (VIP Luxury) -->
+                        <tr class="row-vip-luxury">
+                            <td><strong class="trip-code-text">TRIP-707</strong></td>
+                            <td><span class="flight-class-badge class-vip"><i class="fa-solid fa-crown"></i> VIP Charter</span></td>
+                            <td><strong class="vip-group-name">------------------</strong></td>
+                            <td>الرياض (RUH) <i class="fa-solid fa-plane-up"></i> لندن (LHR)</td>
+                            <td>The Ritz-Carlton (جناح ملكي فاخر)</td>
+                            <td><span class="live-status-badge badge-active"><span class="pulse-dot"></span> في الأجواء حالياً</span></td>
+                        </tr>
+
+                        <!-- مجموعة البيانات 2: رحلة عادية تجارية (Commercial) -->
+                        <tr class="row-commercial">
+                            <td><strong class="trip-code-text">TRIP-302</strong></td>
+                            <td><span class="flight-class-badge class-commercial"><i class="fa-solid fa-plane"></i> Commercial</span></td>
+                            <td>مبتعثو السياحة التعليمية (مجموعة 4)</td>
+                            <td>جدة (JED) <i class="fa-solid fa-plane"></i> مانشستر (MAN)</td>
+                            <td>Sackville Student Complex</td>
+                            <td><span class="live-status-badge badge-active"><span class="pulse-dot"></span> في الأجواء حالياً</span></td>
+                        </tr>
+
+                        <!-- مجموعة البيانات 3: رحلة فاخرة متميزة (VIP Luxury) -->
+                        <tr class="row-vip-luxury">
+                            <td><strong class="trip-code-text">TRIP-909</strong></td>
+                            <td><span class="flight-class-badge class-vip"><i class="fa-solid fa-crown"></i> VIP Charter</span></td>
+                            <td><strong class="vip-group-name">------------------</strong></td>
+                            <td>الظهران (DHA) <i class="fa-solid fa-plane-up"></i> باريس (LBG)</td>
+                            <td>Four Seasons George V</td>
+                            <td><span class="live-status-badge badge-ready"><span class="pulse-dot gold-dot"></span> جاهزة على المدرج</span></td>
+                        </tr>
+
+                        <!-- مجموعة البيانات 4: رحلة عادية تجارية (Commercial) -->
+                        <tr class="row-commercial">
+                            <td><strong class="trip-code-text">TRIP-105</strong></td>
+                            <td><span class="flight-class-badge class-commercial"><i class="fa-solid fa-plane"></i> Commercial</span></td>
+                            <td>عملاء باقة الاستجمام العائلية</td>
+                            <td>الدمام (DMM) <i class="fa-solid fa-plane"></i> إسطنبول (IST)</td>
+                            <td>Hilton Istanbul Bosphorus</td>
+                            <td><span class="live-status-badge badge-complete">مكتملة ومستقرة 🏨</span></td>
+                        </tr>
+                        <!-- مجموعة البيانات 5: رحلة فاخرة متميزة (VIP Luxury) - بعثة دبلوماسية -->
+                        <tr class="row-vip-luxury">
+                            <td><strong class="trip-code-text">TRIP-555</strong></td>
+                            <td><span class="flight-class-badge class-vip"><i class="fa-solid fa-crown"></i> VIP Charter</span></td>
+                            <td><strong class="vip-group-name">البعثة التجارية لوفد الغرفة التجارية</strong></td>
+                            <td>الرياض (RUH) <i class="fa-solid fa-plane-up"></i> نيويورك (JFK)</td>
+                            <td>The Plaza New York (الأجنحة التنفيذية)</td>
+                            <td><span class="live-status-badge badge-active"><span class="pulse-dot"></span> في الأجواء حالياً</span></td>
+                        </tr>
+
+                        <!-- ... مجموعة البيانات 6: رحلة عادية تجارية (Commercial) - سياحة استجمام عائلية -->
+                        <tr class="row-commercial">
+                            <td><strong class="trip-code-text">TRIP-220</strong></td>
+                            <td><span class="flight-class-badge class-commercial"><i class="fa-solid fa-plane"></i> Commercial</span></td>
+                            <td>عملاء برنامج العطلات الصيفية (عائلة الرويلي)</td>
+                            <td>جدة (JED) <i class="fa-solid fa-plane"></i> كوالالمبور (KUL)</td>
+                            <td>Mandarin Oriental Kuala Lumpur</td>
+                            <td><span class="live-status-badge badge-ready"><span class="pulse-dot gold-dot"></span> انتظار في صالة المغادرة</span></td>
+                        </tr>
+
+                        <!-- مجموعة البيانات 7: رحلة فاخرة متميزة (VIP Luxury) - إخلاء طبي طارئ -->
+                        <tr class="row-vip-luxury">
+                            <td><strong class="trip-code-text">TRIP-EMG</strong></td>
+                            <td><span class="flight-class-badge class-vip"><i class="fa-solid fa-crown"></i> VIP Charter</span></td>
+                            <td><strong class="vip-group-name">الإخلاء الطبي الخاص (عائلة السديري)</strong></td>
+                            <td>المدينة (MED) <i class="fa-solid fa-plane-up"></i> ميونخ (MUC)</td>
+                            <td>مشفى ميونخ الدولي (غرف ملكية مجهزة)</td>
+                            <td><span class="live-status-badge badge-active"><span class="pulse-dot"></span> في الأجواء حالياً</span></td>
+                        </tr>
+
+                        <!-- مجموعة البيانات 8: رحلة عادية تجارية (Commercial) - بعثة أكاديمية -->
+                        <tr class="row-commercial">
+                            <td><strong class="trip-code-text">TRIP-408</strong></td>
+                            <td><span class="flight-class-badge class-commercial"><i class="fa-solid fa-plane"></i> Commercial</span></td>
+                            <td>وفد الطلاب المستجدين (برنامج معاهد اللغات)</td>
+                            <td>الدمام (DMM) <i class="fa-solid fa-plane"></i> لندن (LHR)</td>
+                            <td>Sackville Student Complex</td>
+                            <td><span class="live-status-badge badge-complete">مكتملة ومستقرة 🏨</span></td>
+                        </tr>
+                        <!-- مجموعة البيانات 9: رحلة فاخرة متميزة (VIP Luxury) - وفد استثماري قاري -->
+                        <tr class="row-vip-luxury">
+                            <td><strong class="trip-code-text">TRIP-808</strong></td>
+                            <td><span class="flight-class-badge class-vip"><i class="fa-solid fa-crown"></i> VIP Charter</span></td>
+                            <td><strong class="vip-group-name">وفد صندوق الاستثمارات العامة التنفيذي</strong></td>
+                            <td>الرياض (RUH) <i class="fa-solid fa-plane-up"></i> طوكيو (HND)</td>
+                            <td>Aman Tokyo (أجنحة النخبة المطلة)</td>
+                            <td><span class="live-status-badge badge-active"><span class="pulse-dot"></span> في الأجواء حالياً</span></td>
+                        </tr>
+
+                        <!-- مجموعة البيانات 10: رحلة عادية تجارية (Commercial) - وفد استشاري طبي -->
+                        <tr class="row-commercial">
+                            <td><strong class="trip-code-text">TRIP-112</strong></td>
+                            <td><span class="flight-class-badge class-commercial"><i class="fa-solid fa-plane"></i> Commercial</span></td>
+                            <td>الأطباء والاستشاريون الزائرون (مجموعة ألمانيا)</td>
+                            <td>فرانكفورت (MUC) <i class="fa-solid fa-plane"></i> الرياض (RUH)</td>
+                            <td>voco Riyadh Hotel (أجنحة رجال الأعمال)</td>
+                            <td><span class="live-status-badge badge-ready"><span class="pulse-dot gold-dot"></span> انتظار تصريح الشحن</span></td>
+                        </tr>
+
+                        <!-- مجموعة البيانات 11: رحلة فاخرة متميزة (VIP Luxury) - طيران دبلوماسي خاص عابر للقارات -->
+                        <tr class="row-vip-luxury">
+                            <td><strong class="trip-code-text">TRIP-100</strong></td>
+                            <td><span class="flight-class-badge class-vip"><i class="fa-solid fa-crown"></i> VIP Charter</span></td>
+                            <td><strong class="vip-group-name">الوفد الدبلوماسي الرفيع لكبار الشخصيات</strong></td>
+                            <td>جدة (JED) <i class="fa-solid fa-plane-up"></i> جنيف (GVA)</td>
+                            <td>President Wilson Geneva</td>
+                            <td><span class="live-status-badge badge-active"><span class="pulse-dot"></span> في الأجواء حالياً</span></td>
+                        </tr>
+
+                        <!-- مجموعة البيانات 12: رحلة عادية تجارية (Commercial) - وفد رياضي للنخبة -->
+                        <tr class="row-commercial">
+                            <td><strong class="trip-code-text">TRIP-204</strong></td>
+                            <td><span class="flight-class-badge class-commercial"><i class="fa-solid fa-plane"></i> Commercial</span></td>
+                            <td>طاقم المغامرات والرياضات الجبلية بالخارج</td>
+                            <td>الدمام (DMM) <i class="fa-solid fa-plane"></i> نيروبي (NBO)</td>
+                            <td>Safari Park Hotel Nairobi</td>
+                            <td><span class="live-status-badge badge-complete">مكتملة ومستقرة 🏨</span></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </section>
+    <!-- ==========================================================================
+         إضافة 1: معايير الأمان ومتابعة الرحلات الجوية والامتثال الدولي
+         ========================================================================== -->
+    <section class="live-safety-standards-section">
+        <div class="container-live">
+            <div class="section-header" style="text-align: right; margin-bottom: 40px;">
+                <span class="section-subtitle">بروتوكولات حماية وسلامة دقيقة</span>
+                <h2 class="section-title">معايير <span>الأمان والرقابة الجوية</span> المعتمدة</h2>
+                <p class="section-desc">نحن نضمن حماية خطوط سير وفودنا التنفيذية من خلال أنظمة تتبع ذكية وامتثال صارم لكافة قوانين الطيران المدني الدولية.</p>
+            </div>
+
+            <div class="live-safety-grid">
+                <!-- كرت 1 -->
+                <div class="live-safety-card">
+                    <div class="live-safety-icon"><i class="fa-solid fa-satellite-dish"></i></div>
+                    <h3>تتبع فوري عبر الأقمار الصناعية</h3>
+                    <p>كافة الرحلات المجدولة (سواء الطيران الخاص أو التجاري) تخضع لرقابة وتتبع لحظي مستمر من غرفة عملياتنا المركزية لضمان دقة مواعيد الـ SLA.</p>
+                </div>
+                <!-- كرت 2 -->
+                <div class="live-safety-card">
+                    <div class="live-safety-icon"><i class="fa-solid fa-file-shield"></i></div>
+                    <h3>تشفير وحماية بيانات النخبة</h3>
+                    <p>نطبق بروتوكولات أمنية صارمة وممتثلة لقوانين حماية البيانات العالمية لحظر وتأمين سرية هويات الوفود الرسمية ورجال الأعمال طوال الرحلة.</p>
+                </div>
+                <!-- كرت 3 -->
+                <div class="live-safety-card">
+                    <div class="live-safety-icon"><i class="fa-solid fa-passport"></i></div>
+                    <h3>امتثال كامل للمنظمات الدولية</h3>
+                    <p>مكتبنا يعمل بامتثال وتراخيص قانونية كاملة 100% صادرة من الهيئة العامة للطيران المدني، ومنظمات (IATA) و (ICAO) لضمان أعلى معايير السلامة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         إضافة 2: شريط اتخاذ الإجراء السريع والزر الكبير النابض (VIP CTA Box)
+         ========================================================================== -->
+    <section class="live-cta-banner-section">
+        <div class="container-live">
+            <div class="live-cta-box-inner">
+                <i class="fa-solid fa-crown cta-crown-top"></i>
+                <h2>هل ترغب في جدولة رحلة أو بعثة تخصصية لشركتكم؟</h2>
+                <p>مستشارو السفر وخبراء اللوجستيات لدينا متاحون حالياً على مدار الساعة لتصميم باقة سفرك المخصصة بأسعار تفضيلية حصرية.</p>
+                <!-- الزر الكبير النابض المتوهج والموجه للمودال التفاعلي ديناميكياً -->
+                <div class="header-cta" style="margin-top: 30px;">
+                    <a href="./contact.html#contactCardsSection" class="btn-gold live-huge-cta-btn">احجز استشارتك التنفيذية الآن</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- بداية تذييل الموقع (Footer) -->
+    <footer class="main-footer">
+        <div class="container-footer">
+            
+            <!-- العمود الأول: عن المكتب واللوجو -->
+            <div class="footer-col footer-about">
+                <div class="footer-logo">
+                    <a href="../index.html" class="brand-link-footer">
+                        <img src="../assets/logo.webp" alt="أوتاد للسفر الفاخر وحلول الأعمال">
+                        
+                        <div class="brand-text">
+                            <span class="brand-title">أوتاد للسفر الفاخر وحلول الأعمال</span>
+                            <small class="brand-slogan">
+                                المقام اللوجستي الأول لبعثات النخبة، والمعيار المعتمد لرحلات الطيران الخاص
+                            </small>
+                        </div>
+                    </a>
+                </div>
+                <p class="footer-desc-text">مكتب سفر وسياحة رائد مخصص لتقديم حلول لوجستية فاخرة ومتكاملة لرجال الأعمال، الشركات، والأفراد بأعلى معايير الرفاهية والأمان.</p>
+                <div class="social-links">
+                    <a href="#" title="فيسبوك"><i class="fab fa-brands fa-facebook-f"></i></a>
+                    <a href="#" title="انستغرام"><i class="fab fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- العمود الثاني: روابط سريعة للخدمات الأساسية -->
+            <div class="footer-col">
+                <h3>خدماتنا الأساسية</h3>
+                <ul class="footer-links">
+                    <li><a href="./flights.html"><i class="fas fa-chevron-left"></i> حجز وتعديل الطيران</a></li>
+                    <li><a href="./accommodation.html"><i class="fas fa-chevron-left"></i> الفنادق والمنتجعات</a></li>
+                    <li><a href="./papers.html"><i class="fas fa-chevron-left"></i> استخراج التأشيرات</a></li>
+                    <li><a href="./tours.html"><i class="fas fa-chevron-left"></i> البرامج السياحية</a></li>
+                </ul>
+            </div>
+
+            <!-- العمود الثالث: خدمات الشركات والمتقدمة -->
+            <div class="footer-col">
+                <h3>خدمات متقدمة</h3>
+                <ul class="footer-links">
+                    <li><a href="./corporate.html"><i class="fas fa-chevron-left"></i> إدارة سفر الشركات</a></li>
+                    <li><a href="./private-charter.html"><i class="fas fa-chevron-left"></i> تأجير الطائرات الخاصة</a></li>
+                    <li><a href="./special-tours.html"><i class="fas fa-chevron-left"></i> السياحة العلاجية والتعليمية</a></li>
+                    <li><a href="./contact.html"><i class="fas fa-chevron-left"></i> خطط التقسيط والتمويل</a></li>
+                </ul>
+            </div>
+
+            <!-- العمود الرابع: معلومات الاتصال والدعم -->
+            <div class="footer-col footer-contact">
+                <h3>تواصل معنا</h3>
+                <ul class="contact-info-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>برج الرفاهية التجاري، الطابق 14، الرياض، المملكة العربية السعودية</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span dir="ltr">+966 5X XXX XXXX</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>info@yourdomain.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <span>دعم العملاء: 24 ساعة / 7 أيام</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- شريط الحقوق السفلي -->
+        <div class="footer-bottom">
+            <div class="container-bottom">
+                <p>&copy; 2026 <span>أوتاد للسفر الفاخر وحلول الأعمال</span>. جميع الحقوق محفوظة.</p>
+                <div class="bottom-links">
+                    <a href="./privacy-policy.html">سياسة الخصوصية</a>
+                    <a href="./cookies-policy.html">سياسة الكوكيز</a>
+                    <a href="./terms-conditions.html">الشروط والأحكام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- استدعاء ملف الـ JS الخارجي الموحد -->
+    <script src="../js/live-itineraries.js"></script>
+    <script src="../js/script.js"></script>
+
+</body>
+</html>
